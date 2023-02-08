@@ -1,3 +1,6 @@
+@import url(other.css);
+
+/*this is a commet in CSS*/
 h2{
-    color: red;
+    color: salmon;
 }

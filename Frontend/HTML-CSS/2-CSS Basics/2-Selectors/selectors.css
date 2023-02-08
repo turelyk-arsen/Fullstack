@@ -1,0 +1,56 @@
+/*CSS SELECTORS*/
+
+/* all element h2 are selected*/
+h2 {
+  color: blue;
+}
+
+body {
+  background-color: lightblue;
+}
+
+/*Class*/
+.igor {
+  color: blue;
+  font-size: 70px;
+  background-color: chartreuse;
+}
+
+#gabriel {
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid red;
+  color: black;
+  font-size: 10px;
+  background-color: azure;
+}
+
+/* [attribut="value"] */
+input {
+  background-color: red;
+}
+
+[type="text"] {
+  background-color: gray;
+  border-radius: 8px;
+}
+
+/*Grouping*/
+div {
+  background-color: aqua;
+}
+
+div, h1 {
+  color: red;
+  border: 2px solid red;
+}
+
+/* .div1border{
+    color: red;
+    border: 2px solid red;    
+} */
+
+/*  */
+ul>li {
+    border: 1px solid rebeccapurple;
+}
