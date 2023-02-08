@@ -1,0 +1,16 @@
+tag{
+    /* span, a, img, input, label, strong, em */
+    display: inline;
+    text-align: center;
+    /*padding : ... ;*/
+
+    /* all the rest */
+    display: block;
+    margin: auto;
+    /*display: inline-block;*/
+    
+    /*You decide : when you need to create horintal layout*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      /*Inline: Considered text-like
+        Does not understand: heigh, weigh, margin-top/bottom etc
+        Block: using the full "line/space/width" available*/
+
+      div,
+      span {
+        border: 1px solid blue;
+      }
+
+      span {
+        display: inline-block;
+        border-color: green;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+      }
+      section {
+        height: 200px;
+        background-color: lightgray;
+        display: flex;
+
+        /*Horizontal*/
+        justify-content: space-between;
+        /* justify-content: space-around; */
+        /* justify-content: center;  */
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+
+        /*Vertical*/
+        align-items: center;
+        /* align-items: flex-end; */
+        /* align-items: flex-start; */
+
+        flex-direction: column-reverse;
+
+        gap: 10px;
+      }
+      
+      h2 {
+        margin: 0;
+        height: 80px;
+        width: 80px;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Div</div>
+    <div>Div</div>
+    <div>Div</div>
+    <span>Span</span>
+    <span>Span</span>
+    <span>Span</span>
+
+    <section>
+      <h2>Hello</h2>
+      <h2>my dear</h2>
+      <h2>friends</h2>
+    </section>
+  </body>
+</html>

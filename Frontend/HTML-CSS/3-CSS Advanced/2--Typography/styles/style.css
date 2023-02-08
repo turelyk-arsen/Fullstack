@@ -23,7 +23,8 @@ h1{
     /* Google font */
     font-family: 'Roboto', Courier;
     /*dafont to download*/
-    font-family: 'harryP';
+    font-family: 'harryP', Courier, sans-serif;
 
 
 }
+
