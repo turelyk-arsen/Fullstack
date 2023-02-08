@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="../index.html">Home page</a>
+    <h1>FORM</h1>
+    <!-- ACTION is the target to send the data-->
+    <!-- INPUT are autoclosing / void element-->
+    <form action="somewhereFile.php">
+      <input type="submit" value="Log in" />
+    </form>
+    <form action="another.php">
+      <input type="checkbox" checked />
+      <input type="checkbox" />
+      <label for="username">Username: </label>
+      <input type="text" placeholder="Enter your username" required />
+    </form>
+    <br>
+    <form action="example.php">
+      <input type="text" name="username" placeholder="Your name please" required/> <br>
+      <input type="email" name="usermail" placeholder="email"/> <br>
+      <input type="password" name="userpassword" placeholder="password" required/><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
