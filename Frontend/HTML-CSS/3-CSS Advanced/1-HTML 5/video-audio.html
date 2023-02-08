@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video and audio</title>
+    <style>
+      video {
+        width: 200px;
+      }
+      #inspiration{
+        background-color: lightblue;
+        height: 100vh;
+      }
+      #inspiration video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Audio</h1>
+    <audio src="audio/dreams.mp3" controls></audio>
+    <!--MDN audio-->
+
+    <h1>Video</h1>
+    <section id="inspiration">
+      <video src="" autoplay loop muted></video>
+    </section>
+    <!-- MDN Video html-->
+  </body>
+</html>

@@ -1,0 +1,29 @@
+@font-face{
+    font-family: "harryP";
+    src: url(../font/HARRYP__.TTF);
+}
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    /*text related properties inheritage to children*/
+    color: brown;
+    /*tac*/
+    text-align: center;
+    /*tdu*/
+    text-decoration: underline;
+    /*ttu*/
+    text-transform: uppercase;
+
+    /*Font*/
+    /*3 ways*/
+    /*CSS */
+    font-family:'Courier New', Courier, monospace;
+    /* Google font */
+    font-family: 'Roboto', Courier;
+    /*dafont to download*/
+    font-family: 'harryP';
+
+
+}
