@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute and fixed</title>
+    <style>
+      p {
+        border: 1px solid black;
+      }
+      /*fixed on the browser window*/
+      #fixed {
+        position: fixed;
+        top: 50px;
+        margin: 0;
+        background-color: yellow;
+        z-index: -1;
+        /*layers of the flow - is behind and + is in front*/
+      }
+      #absolute {
+        /*absolute move the element ... but we need an additional information*/
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+      }
+      #reference {
+        position: relative;
+        height: 200px;
+        width: 200px;
+        background-color: chartreuse;
+      }
+      #parent{
+        position: relative;
+        height: 300px;
+        width: 300px;
+        background-color: #b46969;
+      }
+      #child{
+        position: absolute;
+        bottom: 10%;
+        margin: 0;
+
+
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias?</p>
+    <p id="fixed">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias?
+    </p>
+
+
+    <div id="parent">
+          <p id="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias?</p>
+    </div>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias?</p>
+
+    <div id="reference">
+      <p id="absolute">Lorem ipsum</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias?</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ullam quia
+      laudantium suscipit dolore itaque expedita velit ipsam recusandae corporis
+      autem, atque totam modi dolorem voluptatibus iusto blanditiis ratione
+      nihil eaque praesentium placeat, labore deleniti? Voluptatibus impedit
+      temporibus, nemo modi doloremque animi eaque facilis quidem veritatis hic
+      iste aspernatur mollitia nulla earum ipsum provident ad, laborum aut illum
+      debitis sequi vel alias soluta! Natus officia, numquam ex tempora
+      accusamus repellendus quo incidunt aliquam illo mollitia iusto quod. Ex
+      dolorum id odit recusandae dolor sunt illum quisquam molestiae, nemo
+      consectetur, adipisci laboriosam cupiditate, laudantium fugiat magni
+      repellat corporis perspiciatis autem? Porro.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias?</p>
+  </body>
+</html>
