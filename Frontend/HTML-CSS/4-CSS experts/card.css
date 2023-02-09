@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(168, 168, 168);
+}
+.card {
+  height: 420px;
+  width: 370px;
+  margin: 50px auto;
+  background-color: #fff;
+}
+.card header {
+  background-image: url(https://picsum.photos/200);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.card .card-content {
+  background-color: #fff;
+  padding: 20px;
+}
+.card .card-content h2 {
+  font-size: 2rem;
+}
+.card .card-content h3 {
+  color: orange;
+}
+.card .card-content p {
+  font-size: 1rem;
+  color: gray;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*mecanics*/
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .card-content {
+  position: absolute;
+  /*what reference element*/
+  bottom: 0;
+  transform: translateY(50%);
+  transition-duration: 0.4s;
+  /* duration in the original not the hover */
+}
+
+.card:hover .card-content {
+  transform: translateX(0%);
+}

@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+article.card {
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+    background-image: url(https://picsum.photos/200);
+    background-size: cover;
+    /*Become a reference point*/
+    position: relative;
+    /*Cut everything overflowing outside the elemnt*/
+    overflow: hidden;
+}
+
+.card .description {
+    background-color: rgba(255, 163, 163, 0.733);
+    position: absolute;
+    /*What's the reference element ? -> card*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    transform: translateY(100%);
+    transition-duration: .5s;
+}
+
+.card:hover .description {
+    transform: translateY(0%);
+}
