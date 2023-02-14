@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*mobile*/
+        #content article{
+            background-color: yellow;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+        }
+        /*Break point : 800px */
+        /*Tablet*/
+        @media screen and (min-width: 800px) {
+            section {
+                width: 800px;
+                margin: auto;
+                display: flex;
+                gap: 20px;
+            }
+            body {
+                background-color: red;
+            }
+        }
+        /*Desktop*/
+        @media screen and (min-width: 1000px) {
+            body {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="content"> 
+        <article>We are the article</article>
+        <article>and we come in peace</article>
+    </section>
+    
+</body>
+</html>

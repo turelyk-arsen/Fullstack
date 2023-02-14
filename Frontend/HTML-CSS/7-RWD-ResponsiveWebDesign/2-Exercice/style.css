@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+}
+body {
+        background-color: grey;
+}
+nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+nav p {
+background-color: lightgray;
+padding: 10px;
+}
+
+section{
+    background-color: cadetblue;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+article {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(178, 178, 178);
+}
+#colorrr {
+    background-color: lightgray;
+}
+
+@media screen and (min-width: 480px) {
+    section{
+        background-color: cadetblue;
+        width: 100%;
+        margin: auto;
+        padding: 10px;    
+    }
+    #tablets {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        background-color: red;
+}
+h1, h3 {
+    text-align: center;
+}
+    section{
+        background-color: red;
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+
+    }
+    #desktop {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+    nav  {
+        display: flex;
+        flex-direction: column;
+    }
+}
