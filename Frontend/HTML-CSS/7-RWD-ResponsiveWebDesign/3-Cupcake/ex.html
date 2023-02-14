@@ -6,59 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="search">
+
+    <header class="search">
       <img src="img/i.png" alt="i" />
-      <input type="text" value="search..." />
-    </div>
-    <img src="img/Logo.png" alt="" srcset="">
+      <form action="#file.php">
+        <input type="text" placeholder="search..." />
+      </form>
+    </header>
+
     <nav>
-      <li><a href="#">Cheesecake</a></li>
-      <li><a href="#">Gingerbread</a></li>
-      <li><a href="#">Fruitcake</a></li>
-      <li><a href="#">Muffin</a></li>
-      <li><a href="#">Cookie</a></li>
+      <ul class="navigation">
+        <li><a href="#">Cheesecake</a></li>
+        <li><a href="#">Gingerbread</a></li>
+        <li><a href="#">Fruitcake</a></li>
+        <li><a href="#">Muffin</a></li>
+        <li><a href="#">Cookie</a></li>
+      </ul>
     </nav>
 
-    <main>
+    <img id="logo" src="img/Logo.png" alt="logo" />
+
+    <section>
       <h1>Cupcake Responsive Design</h1>
-      <p>
+      <p class="pink">
         Ice cream macaroon wafer chocolate cake carrot cake fruitcake jujubes I
         love I love. Caramels chocolate lemon drops I love tart chocolate bar
         gummi bears dragée. Cotton candy Jelly marzipan cookie gummies
-        gingerbread croissant. igor-marty.com
+        gingerbread croissant.
+        <a href="#">igor-marty.com </a>
       </p>
+    </section>
 
-      <h1>Yummies</h1>
+    <h2>Yummies</h2>
 
-      <section>
-        <div>
-          <h2>Cheesecake Marzipan</h2>
+    <section>
+      <div>
+        <article>
+          <img src="img/miniature1.png" alt="" />
+          <h3>Cheesecake Marzipan</h3>
           <p>
             Ice cream macaroon wafer chocolate cake carrot cake fruitcake
             jujubes I love I love. Ice cream macaroon wafer chocolate cake
             carrot cake fruitcake jujubes I love I love. Ice cream macaroon
             wafer chocolate cake carrot cake fruitcake jujubes I love I love.
           </p>
-        </div>
-        <div>
-          <h2>Macaroon</h2>
+        </article>
+        <article>
+        <img src="img/miniature2.png" alt="" />
+          <h3>Macaroon</h3>
           <p>
             Caramels chocolate lemon drops I love tart chocolate bar gummi bears
             dragée.
           </p>
-        </div>
-
-        <div>
-          <h2>Fruitcake</h2>
+        </article>
+        <article>
+          <img src="img/miniature3.png" alt="" />
+          <h3>Fruitcake</h3>
           <p>
             Cotton candy Jelly marzipan cookie gummies gingerbread croissant.
             igor-marty.com
           </p>
-        </div>
-        <p>Copyright : Juste me :)</p>
-      </section>
-    </main>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright : Juste me :)</p>
+    </footer>
   </body>
 </html>
