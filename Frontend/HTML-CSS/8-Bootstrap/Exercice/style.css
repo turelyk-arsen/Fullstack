@@ -1,0 +1,15 @@
+.firstDiv {
+    background-image: url(images/1-shape.png);
+    background-size: cover;
+}
+.secondDiv {
+    width: 20%;
+    margin:auto;
+}
+.card-link {
+    text-decoration: none;
+}
+.thirdDiv {
+    background-image: url(images/2-shape.png);
+    background-size: cover;
+}
