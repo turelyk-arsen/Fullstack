@@ -1,0 +1,36 @@
+body {
+  background-color: red;
+}
+
+h1 {
+  text-align: center;
+  color: #ff1a1a;
+  background-color: #cc0000;
+  font-size: 55px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+ul li {
+  margin: 5px;
+}
+ul li a {
+  background-color: #cc0000;
+  padding: 10px 20px;
+  color: white;
+  display: block;
+  transition-duration: 0.4s;
+}
+ul li a:hover {
+  transform: rotate(-90deg);
+}
+
+@media screen and (min-width: 800px) {
+  ul li a {
+    color: blue;
+  }
+}/*# sourceMappingURL=style.css.map */

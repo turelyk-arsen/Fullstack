@@ -1,0 +1,14 @@
+body {
+  background-color: red;
+}
+
+/*don't nest more than 4 levels*/
+/*dont nest the <html> or <body>*/
+/* at # we start root again*/
+ul li a {
+  color: white;
+}
+
+#section article {
+  width: 100px;
+}/*# sourceMappingURL=example.css.map */

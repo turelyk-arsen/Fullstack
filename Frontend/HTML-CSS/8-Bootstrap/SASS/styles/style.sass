@@ -1,0 +1,28 @@
+@import _colors
+
+body
+    background-color: $main_color
+h1
+    text-align: center
+    color: lighten($main_color, 5)
+    background-color: darken($main_color, 10)
+    font-size: 3*$default_size+10px
+
+ul
+    list-style: none
+    padding: 0
+    display: flex
+    justify-content: center
+    li
+        margin: 5px
+        a
+            background-color: darken($main_color, 10)
+            padding: 10px 20px
+            color: white
+            display: block
+            transition-duration: 0.4s
+            &:hover
+                transform: rotate(-90deg)
+@media screen and (min-width: 800px)
+    ul li a
+        color: blue
