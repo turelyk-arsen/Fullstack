@@ -5,106 +5,117 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    color: var(--textcolor)
+}
+
+:root {
+    --background: white;
+    --textcolor: #777777;
+    --colorbutton: #329EF7;
+    --activecolor: #444444;
+    --colorarticle: #8892A0;
+}
+
 /* HEADER */
-header {
+nav {
     display: flex;
-    flex-direction: row;
-    height: 57px;
-    justify-content: space-around;
-    background: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background: var(--background);
+    width: 90%;
+    margin: auto;
+}
+
+nav img {
+    height: 30px;
 }
 
 nav ul {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
+    margin-bottom: 0px;
 }
 
 nav ul li {
     list-style: none;
-    align-items: center;
-    justify-content: center;
-
 }
 
 nav ul li a {
     text-decoration: none;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777777;
+    color: var(--textcolor);
     width: 43px;
     margin: 10px;
+}
 
+.buttonmy {
+    background-color: var(--colorbutton);
+    color: var(--background);
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 10px;
 }
 
 nav ul li a.active {
-    color: #444444;
+    color: var(--activecolor);
 }
 
 nav ul li a:hover {
     text-decoration: underline;
 }
 
-header div a {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
+nav div a {
     font-size: 16px;
     line-height: 24px;
-    color: #777777;
+    color: var(--textcolor);
     padding: 10px;
 }
 
 /* SECTION */
 section {
-    margin: 120px 216.672px 121px;
-    height: 561.45px;
-    background: #FFFFFF;
-
+    margin: auto;
+    width: 90%;
+    height: 550px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 section h1 {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 600;
     font-size: 44px;
     line-height: 66px;
-    color: #444444;
+    color: var(--activecolor);
     text-align: center;
 
 }
 
 section article {
     column-count: 2;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 22.4px;
     line-height: 34px;
-    color: #8892A0;
+    color: var(--colorarticle);
 }
 
 /* contact */
 article.contact {
-    background: #FFFFFF;
+    background: url(shapes/9.svg) no-repeat center;
+}
+article.contact div{
+    background: var(--background);
     border-top: 5px solid #329EF7;
     box-shadow: 0px 5px 14px rgba(129, 129, 129, 0.2);
     border-radius: 4px;
-    margin: 65px 216.672px 60px;
-    background: url(shapes/9.svg) no-repeat center;
-
+    margin: auto;
+    width: 90%;
 }
 
-article.contact h2 {
-    font-family: 'Lato';
-    font-style: normal;
+article.contact div h2 {
     font-weight: 600;
     font-size: 44px;
     line-height: 66px;
@@ -113,21 +124,18 @@ article.contact h2 {
     padding-top: 70px;
 }
 
-article.contact p {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
+article.contact div p {
     font-size: 22.4px;
     line-height: 34px;
     color: #8892A0;
     margin: auto 250px;
 }
 
-article.contact form {
+article.contact div form {
     margin: auto 150px;
 }
 
-article.contact form button {
+article.contact div form button {
     width: 100px;
     margin: 20px auto;
 }
@@ -141,9 +149,6 @@ footer article {
 }
 
 footer>p {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -151,8 +156,6 @@ footer>p {
 }
 
 footer article div h4 {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 900;
     font-size: 18px;
     line-height: 27px;
@@ -168,9 +171,6 @@ footer article div ul li {
 }
 
 footer article div ul li a {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #444444;
@@ -182,9 +182,6 @@ footer article div ul li a:hover {
 }
 
 footer article div p {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #8892A0;
