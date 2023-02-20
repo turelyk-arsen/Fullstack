@@ -1,0 +1,253 @@
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    /* remove default dots of lists */
+    list-style: none;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  p {
+    font-family: 'Roboto', sans-serif;
+    /* You have to import to font weight in google font */
+    font-weight: 300;
+    color: #333333;
+  }
+  /* header */
+  header {
+    background-image: url('../images/header.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    padding-bottom: 200px;
+    text-align: center;
+    color: white;
+  }
+  header p {
+    color: white;
+  }
+  #register {
+    display: flex;
+    justify-content: center;
+  }
+  #register a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin: 5px;
+    border: 3px solid transparent;
+    transition-duration: 0.3s;
+  }
+  #register a:hover {
+    border-color: white;
+  }
+  header h1 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  header h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  header p {
+    padding-bottom: 30px; /* create space from the <p> to the <a>*/
+    /*because <a> is display inline so does not understand margin top/bottom height and width*/
+  }
+  .red-butt-on {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    background-color: #ff4e50;
+    padding: 10px 50px;
+    border-radius: 30px;
+  }
+  
+  /* CARDS SECTION */
+  
+  main h2 {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  /*define background*/
+  .card {
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 240px;
+    color: white;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    /*magic part*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .card {
+    background-image: url(../images/step1desk.png);
+  }
+  .card + .card {
+    background-image: url(../images/step2desk.png);
+  }
+  .card + .card + .card {
+    background-image: url(../images/step3desk.png);
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    padding: 10px 0;
+  }
+  .card p {
+    color: white;
+  }
+  .card .red-butt-on {
+    font-weight: 100;
+    padding: 5px 10px;
+    letter-spacing: 3px; /*strech the letters in the word*/
+  }
+  
+  /*search  form*/
+  #search {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #search p {
+    padding: 10px;
+  }
+  #search form input {
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+  }
+  #search form input,
+  #search form button {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  #search form button {
+    border: 0;
+  }
+  /*horizontal line*/
+  hr {
+    border: 2px solid #ff4e50;
+  }
+  /* footer */
+  footer {
+    text-align: center;
+  }
+  footer ul ul {
+    display: flex;
+    justify-content: center;
+  }
+  footer ul h2 {
+    padding-top: 20px;
+    color: #ff4e50;
+    font-size: 16px;
+  }
+  footer ul h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  footer ul a {
+    color: #666666;
+    font-size: 14px;
+    font-weight: lighter;
+    text-decoration: none;
+    padding: 10px;
+  }
+  /*TABLET MODE*/
+  @media screen and (min-width: 768px) {
+    nav {
+      /* Center the nav bar */
+      width: 768px;
+      margin: auto;
+      /*I want the ul and h1 on the same line*/
+      display: flex;
+      /* I want them on each side of the available width */
+      justify-content: space-between;
+      /*By default the order of the element is opposite*/
+      flex-direction: row-reverse;
+    }
+    nav h1 {
+      /*the old padding top was too much!!*/
+      padding-top: 15px;
+    }
+    header h2 {
+      /* Create a bigger space from the nav */
+      padding-top: 100px;
+      /*Title is bigger*/
+      font-size: 52px;
+    }
+    header p {
+      /* paragraph are bigger */
+      font-size: 24px;
+    }
+    .red-butt-on {
+      /* the button is less large */
+      padding: 10px 20px;
+    }
+    /* Cards in the same line*/
+    .flexiflexer {
+      display: flex;
+      width: 768px;
+      margin: auto;
+    }
+    /*the size of the card changes*/
+    .card {
+      height: 400px;
+      width: 236px;
+    }
+    #search form input,
+    #search form button {
+      display: inline-block;
+      margin: 10px;
+    }
+    /*direct children*/
+    footer > ul {
+      display: flex;
+      justify-content: space-between;
+      width: 768px;
+      margin: auto;
+    }
+    footer ul ul {
+      text-align: left;
+      /*They were previously horizontal*/
+      flex-direction: column;
+    }
+    footer ul ul a {
+      padding-left: 0;
+    }
+    footer img {
+      padding-top: 20px;
+    }
+  }
+  
+  @media screen and (min-width: 940px) {
+    .flexiflexer {
+      width: 940px;
+    }
+    .card {
+      height: 400px;
+      width: 300px;
+    }
+    footer > ul {
+      width: 940px;
+    }
+  }
+  
