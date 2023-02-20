@@ -6,6 +6,7 @@
 }
 
 /* Find your holiday partner  */
+
 #login {
     background-image: url(images/header.png);
     background-position: center;
@@ -15,53 +16,42 @@
     /* height: 175px; */
 }
 
-#login article {
+#login article,
+#login .col {
     display: flex;
-    flex-direction: column-reverse;
-    /* justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 175px; */
 }
 
-#login .col-md article {
-    display: flex;
-    /* justify-content: space-evenly;
-    align-items: center;
-    height: 175px; */
-}
 
-#login .col-lg article {
-    display: flex;
-    /* justify-content: space-evenly; */
-    /* height: 175px; */
-}
 
-#login div p,
-#login div button {
+#login article div a {
     letter-spacing: 0px;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: bold;
-    margin: 0;
+    text-decoration: none;
 }
 
-#login div button {
-    /* width: 90px;
-    height: 36px; */
+.buttonfirst {
     background: #1A191500 0% 0% no-repeat padding-box;
     border: 2px solid #FFFFFF;
     border-radius: 18px;
     opacity: 1;
     font-family: 'Montserrat', sans-serif;
-
+    padding: 7px;
 }
 
-#login article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.buttonfirst:hover,
+#login article div a:hover {
+    border: none;
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    border-radius: 18px;
+    padding: 7px;
+
 }
 
 #login h3 {
@@ -70,9 +60,9 @@
     color: #FFFFFF;
     font-size: 20px;
     font-weight: bold;
-    /* width: 160px; */
-    /* height: 24px; */
     margin: auto;
+    padding-top: 100px;
+
 }
 
 #login h1 {
@@ -85,6 +75,8 @@
     /* height: 73px; */
     margin: auto;
     text-align: center;
+    margin-top: 100px;
+
 }
 
 #login p {
@@ -97,14 +89,39 @@
     /* height: 46px; */
 }
 
-#login article button {
+.buttontwo {
     background: #FF4E50 0% 0% no-repeat padding-box;
     border-radius: 20px;
     border: #FF4E50;
     /* width: 280px; */
-    /* height: 40px; */
+    height: 40px;
+    padding: 5px 20px;
+    margin: auto;
+}
+
+.buttontwo {
     letter-spacing: 0px;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
+    text-decoration: none;
+    margin-bottom: 100px;
+}
+
+.buttontwo:hover {
+    background: #fb3337 0% 0% no-repeat padding-box;
+    color: #c6c6c6;
+}
+
+/* Tablet version thanks to media-query (break point 768px) */
+
+@media screen and (min-width: 768px) {
+    #login .col article {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #login h3 {
+        padding: 30px;
+    }
 }
