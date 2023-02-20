@@ -15,7 +15,7 @@
     padding-top: 20px;
 }
 
-#login article,
+#login nav,
 #login {
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 }
 
 
-#login article div a {
+#login nav div a {
     letter-spacing: 0px;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
@@ -43,7 +43,7 @@
 }
 
 .buttonfirst:hover,
-#login article div a:hover {
+#login nav div a:hover {
     border: none;
     background-color: #fff;
     color: rgb(85, 85, 85);
@@ -282,9 +282,10 @@ footer ul a:hover {
 /* Tablet version thanks to media-query (break point 768px) */
 
 @media screen and (min-width: 768px) {
-    #login article {
+    #login nav {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-around;
     }
 
     #login h1 {
@@ -298,7 +299,6 @@ footer ul a:hover {
     #login p {
         font-size: 24px;
     }
-
 
     main div {
         display: flex;
