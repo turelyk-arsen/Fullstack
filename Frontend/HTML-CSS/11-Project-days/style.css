@@ -1,0 +1,110 @@
+/* main features  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Find your holiday partner  */
+#login {
+    background-image: url(images/header.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 160px; */
+    /* height: 175px; */
+}
+
+#login article {
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: space-evenly;
+    align-items: center;
+    height: 175px; */
+}
+
+#login .col-md article {
+    display: flex;
+    /* justify-content: space-evenly;
+    align-items: center;
+    height: 175px; */
+}
+
+#login .col-lg article {
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* height: 175px; */
+}
+
+#login div p,
+#login div button {
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#login div button {
+    /* width: 90px;
+    height: 36px; */
+    background: #1A191500 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    border-radius: 18px;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#login article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login h3 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    /* width: 160px; */
+    /* height: 24px; */
+    margin: auto;
+}
+
+#login h1 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: bold;
+    /* width: 290px; */
+    /* height: 73px; */
+    margin: auto;
+    text-align: center;
+}
+
+#login p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    /* width: 216px; */
+    /* height: 46px; */
+}
+
+#login article button {
+    background: #FF4E50 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    border: #FF4E50;
+    /* width: 280px; */
+    /* height: 40px; */
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
