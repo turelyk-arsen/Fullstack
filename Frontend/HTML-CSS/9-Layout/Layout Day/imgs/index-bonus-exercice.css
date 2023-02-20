@@ -1,0 +1,300 @@
+/* main styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.text1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    color: #8892A0;
+}
+
+.text2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #8892A0;
+}
+
+.heading2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 66px;
+    letter-spacing: 0em;
+    color: #444444;
+}
+
+.heading3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0em;
+    color: #444444;
+}
+
+/* header  */
+header,
+#designBlock,
+#features,
+#subscribe {
+    width: 90%;
+    margin: 120px auto;
+    display: flex;
+    max-width: 1100px;
+    gap: 100px;
+}
+
+header img {
+    width: 250px;
+}
+
+header article button {
+    background: #FE6655;
+    border: 2px solid #FE6655;
+    border-radius: 4px;
+    /* width: 135px; */
+    margin-top: 20px;
+
+}
+
+header article button a {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    padding: 12px 18px;
+}
+
+/* Design block  */
+section#designBlock img {
+    width: 540px;
+    height: 415px;
+}
+
+section#designBlock div p.text2 {
+    margin-top: 30px;
+}
+
+section#designBlock div div i {
+    color: #6C757D;
+    height: 44px;
+    font-family: Font Awesome 5 Brands;
+    font-size: 41px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0.5em;
+    text-align: left;
+    padding-top: 20px;
+}
+
+/* features  */
+#features article h4.text2 {
+    font-weight: 900;
+    color: #444444;
+}
+
+#features article p.text2 {
+    font-weight: 400;
+}
+
+#features article img {
+    width: 60px;
+    height: 60px;
+}
+
+#features img {
+    width: 350px;
+    height: 700px;
+}
+
+#features article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.right {
+    text-align: right;
+}
+
+/* subscribe  */
+
+section#subscribe img {
+    width: 445px;
+    height: 300px;
+}
+
+section#subscribe form input {
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px 0px 0px 4px;
+    width: 433px;
+    height: 38px;
+    text-align: center;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0px;
+    margin-top: 30px;
+    margin-left: 0;
+}
+
+section#subscribe form p {
+    font-size: 600;
+}
+
+section#subscribe form button {
+    background: #329EF7;
+    border: 2px solid #329EF7;
+    border-radius: 0px 4px 4px 0px;
+    width: 105px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+
+/* pricing plan  */
+#backgrounginplan {
+    background-image: url(shapes/8.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 900px;
+}
+
+#pricingplan {
+    width: 90%;
+    margin: 120px auto;
+    max-width: 1100px;
+}
+
+#pricingplan section {
+    display: flex;
+}
+
+#pricingplan section article:hover {
+    border-top: 5px solid #329EF7;
+    box-shadow: 0px 5px 14px rgba(129, 129, 129, 0.2);
+    border-radius: 4px;
+    scale: 1.1;
+    background-color: #fff;
+}
+
+#pricingplan h1 {
+    text-align: center;
+}
+
+#pricingplan article {
+    box-shadow: 0px 5px 14px rgba(129, 129, 129, 0.2);
+    width: 370px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: scale 1s;
+    background-color: #fff;
+
+}
+
+#pricingplan h3 {
+    font-weight: 300;
+    text-align: center;
+}
+
+#pricingplan article h2 {
+    font-weight: 900;
+    text-align: center;
+}
+
+#pricingplan article h2 span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 66px;
+}
+
+#pricingplan article ul {
+    font-weight: 400;
+    list-style: none;
+    padding-left: 70px;
+}
+
+#pricingplan article button {
+    border: 2px solid #343A40;
+    border-radius: 4px;
+    width: 140px;
+    height: 40px;
+    background: #FFFFFF;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 120px;
+}
+
+#pricingplan article button:hover {
+    background: #329EF7;
+    border: 2px solid #329EF7;
+    border-radius: 4px;
+}
+
+/* team  */
+
+#team {
+    width: 90%;
+    margin: 120px auto;
+    max-width: 1100px;
+}
+
+#team>div {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+section#ourteam {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#ourteam article img {
+    width: 160px;
+    height: 160px;
+    border-radius: 4px;
+}
+
+#ourteam article {
+    max-width: 500px;
+    height: 175px;
+    display: flex;
+    gap: 20px;
+}
+
+.card h5 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 27px;
+    color: #444444;
+}
+
+.card p.text2 {
+    font-weight: 400;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
