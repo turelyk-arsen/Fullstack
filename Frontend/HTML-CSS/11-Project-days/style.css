@@ -12,8 +12,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 160px; */
-    /* height: 175px; */
+    padding-top: 20px;
 }
 
 #login article,
@@ -23,7 +22,6 @@
     justify-content: center;
     align-items: center;
 }
-
 
 
 #login article div a {
@@ -62,7 +60,6 @@
     font-weight: bold;
     margin: auto;
     padding-top: 100px;
-
 }
 
 #login h1 {
@@ -71,12 +68,9 @@
     color: #FFFFFF;
     font-size: 30px;
     font-weight: bold;
-    /* width: 290px; */
-    /* height: 73px; */
     margin: auto;
     text-align: center;
     margin-top: 100px;
-
 }
 
 #login p {
@@ -85,15 +79,12 @@
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
-    /* width: 216px; */
-    /* height: 46px; */
 }
 
 .buttontwo {
     background: #FF4E50 0% 0% no-repeat padding-box;
     border-radius: 20px;
     border: #FF4E50;
-    /* width: 280px; */
     height: 40px;
     padding: 5px 20px;
     margin: auto;
@@ -116,7 +107,7 @@
 /* main part  */
 main {
     width: 90%;
-    margin: auto;
+    margin: 20px auto;
     text-align: center;
 }
 
@@ -162,13 +153,14 @@ main div article.mycard3 {
     border-radius: 20px;
     letter-spacing: 2px;
     color: #FFFFFF;
-    padding: 10px;
+    padding: 5px 25px;
+    margin: 20px 0;
 }
 
 .buttonthree:hover {
     background: #f5272a 0% 0% no-repeat padding-box;
     color: #a09e9e;
-    rgb(137, 134, 134)
+
 }
 
 main div article.mycard h3 {
@@ -201,12 +193,23 @@ main section p {
     font-family: 'Roboto', sans-serif;
 }
 
+main section {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+main section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 main section form input {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 0px #EEEEEE;
     border: 1px solid #CCCCCC;
     border-radius: 4px;
-    padding: 4px;
+    padding: 5px 15px;
     text-align: left;
     letter-spacing: 0px;
     color: #999999;
@@ -228,6 +231,53 @@ main section form button:hover {
 }
 
 /* footer */
+footer {
+    border-top: 4px solid #FF4E50;
+    padding-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+footer h2 {
+    text-align: center;
+    letter-spacing: 0.8px;
+    color: #FF4E50;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+footer h3 {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer ul a {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #666666;
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer ul a:hover {
+    color: #303030;
+    text-decoration: underline;
+}
+
+#company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 /* Tablet version thanks to media-query (break point 768px) */
 
@@ -235,12 +285,20 @@ main section form button:hover {
     #login article {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-around;
+    }
+
+    #login h1 {
+        font-size: 52px;
     }
 
     #login h3 {
         padding: 30px;
     }
+
+    #login p {
+        font-size: 24px;
+    }
+
 
     main div {
         display: flex;
@@ -253,4 +311,38 @@ main section form button:hover {
         padding: 10px;
         width: 30%;
     }
+
+    main section form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    footer h2 {
+        padding-top: 0px;
+    }
+
+    #company {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media screen and (min-width: 940px) {
+    main {
+        width: 70%;
+        margin: auto;
+    }
+
 }
