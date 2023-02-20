@@ -17,7 +17,7 @@
 }
 
 #login article,
-#login .col {
+#login {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,15 +113,144 @@
     color: #c6c6c6;
 }
 
+/* main part  */
+main {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+main div article.mycard {
+    text-align: left;
+    padding: 10px;
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    background: transparent linear-gradient(0deg, #00000099 0%, #00000000 100%) 0% 0% no-repeat padding-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/* main div article span,
+main div article h3,
+main div article p  {
+    padding: 10px;
+    transform: translate(0px, 150px);
+} */
+
+
+main div article.mycard1 {
+    background-image: url(images/step1desk.png);
+}
+
+main div article.mycard2 {
+    background-image: url(images/step2desk.png);
+}
+
+main div article.mycard3 {
+    background-image: url(images/step3desk.png);
+}
+
+.buttonthree {
+    background: #FF4E50 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.buttonthree:hover {
+    background: #f5272a 0% 0% no-repeat padding-box;
+    color: #a09e9e;
+    rgb(137, 134, 134)
+}
+
+main div article.mycard h3 {
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+main div article.mycard p {
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+main section h2 {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+}
+
+main section p {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #333333;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+main section form input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 0px #EEEEEE;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 4px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #999999;
+}
+
+main section form button {
+    background: #FF4E50 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    padding: 5px 20px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    border: #FF4E50;
+}
+
+main section form button:hover {
+    background: #fb7a7c 0% 0% no-repeat padding-box;
+    color: #ffd9d9;
+}
+
+/* footer */
+
 /* Tablet version thanks to media-query (break point 768px) */
 
 @media screen and (min-width: 768px) {
-    #login .col article {
+    #login article {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-around;
     }
 
     #login h3 {
         padding: 30px;
+    }
+
+    main div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main div article.mycard {
+        text-align: left;
+        padding: 10px;
+        width: 30%;
     }
 }
