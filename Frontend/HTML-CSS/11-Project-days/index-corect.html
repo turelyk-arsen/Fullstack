@@ -6,27 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index-corect.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
     
     <header>
         <nav>
-            <ul>
+            <ul id="register">
                 <li><a href="#">Log in</a></li>
                 <li><a href="#">Sign up</a></li>
             </ul>
             <h1>DREAMSHARE</h1>
         </nav>
-        <h2>SHARE YOUR HOLIDAY DREAMS</h2>
+        <h2>SHARE YOUR <br> HOLIDAY DREAMS</h2>
         <p>And find the perfect partner to fullfill it</p>
-        <a class="buttontwo" href="#"> Find your holiday partner </a>
+        <a class="redbutton" href="#"> Find your holiday partner </a>
     </header>
 
-    <!-- main part CARD -->
-    <main>
-        <h2>How Dreamshare works?</h2>
-    </main>
+   <!-- main part CARD -->
+   <main>
+    <h1>How Dreamshare works?</h1>
 
+    <div>
+      <!-- container for 3 article  -->
+      <article class="card">
+        <span class="redbutton">STEP 1</span>
+        <h3>Sed leo enim, condimentum</h3>
+        <p>
+          Quisque libero libero, dictum non turpis in, luctus semper lorem.
+          Donec rhoncus a leo sit amet facilisis.
+        </p>
+      </article>
+      <article class="card">
+        <span class="redbutton">STEP 2</span>
+        <h3>Morbi velit risus</h3>
+        <p>
+          Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit
+          amet porttitor est.
+        </p>
+      </article>
+      <article class="card">
+        <span class="redbutton">STEP 3</span>
+        <h3>Sed leo enim, condimentum</h3>
+        <p>
+          Quisque libero libero, dictum non turpis in, luctus semper lorem.
+          Donec rhoncus a leo sit amet facilisis.
+        </p>
+      </article>
+    </div>
+    <!-- /end of CARD  -->
 
+    <!-- beginning Search section  -->
+    <section id="search">
+      <h2>Discover holiday activity ideas</h2>
+      <p>Hi! What are your holiday interests?</p>
+      <form action="file.php">
+        <input type="text" name="" placeholder="Enter your interests" />
+        <button class="redbutton" type="submit">Search partners</button>
+      </form>
+    </section>
+  </main>
+
+  <hr>
+
+  <!-- Footer  -->
+  <footer>
+    <!-- All footer inside list  -->
+    <ul>
+      <li><h2>DREAMSHARE</h2></li>
+      <li><h3>Company</h3>
+        <ul id="company">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </li>
+      <li><h3>Partners</h3></li>
+      <li><img src="images/logo.png" alt=""></li>
+    </ul>
+  </footer>
+
+  <!-- https://fullstack-course.notion.site/HTML-Project-918dcb81e55841639b92831f62d3c9ea  -->
 </body>
 </html>

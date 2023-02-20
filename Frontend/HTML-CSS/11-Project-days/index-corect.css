@@ -1,5 +1,166 @@
+/* general  */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/* remove all dots  */
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #333333;
+}
+
+/* header  */
+header {
+  background-image: url(images/header.png);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  padding-bottom: 200px;
+  text-align: center;
+  color: white;
+}
+
+header p {
+  color: white;
+}
+
+#register {
+  display: flex;
+  justify-content: center;
+}
+
+#register a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin: 5px;
+  border: 3px solid transparent;
+  transition-duration: 0.3s;
+}
+
+#register a:hover {
+  border-color: white;
+}
+
+header h1 {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+header p {
+  padding-bottom: 30px;
+  /* creat space from the p to the a because a is display
+    inline so does not understand margin top/bottom height and width */
+}
+
+.redbutton {
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  background-color: #ff4e50;
+  padding: 10px 50px;
+  border-radius: 30px;
+}
+
+/* card section  */
+main {
+  font-size: 22px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* define the backgroung  */
+.card {
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 240px;
+  color: white;
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 5px;
+  /* magic part  */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.card {
+  background-image: url(images/step1desk.png);
+}
+
+/* CSS selector group  */
+.card + .card {
+  background-image: url(images/step2desk.png);
+}
+
+.card + .card + .card {
+  background-image: url(images/step3desk.png);
+}
+
+.card h3 {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.card p {
+  color: white;
+}
+
+.card .redbutton {
+  font-weight: 100;
+  padding: 5px 10px;
+  letter-spacing: 3px;
+}
+
+#search {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#search p {
+  padding: 10px;
+}
+
+#search form input {
+  border-radius: 5 px;
+  border: 1px solid #cccccc;
+}
+
+#search form input,
+#search form button {
+  display: block;
+  width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+}
+#search form button {
+    border: 0;
+}
+
+hr{
+    border: 2px solid #ff4e50;
+}
+
+/* footer  */
+
+
