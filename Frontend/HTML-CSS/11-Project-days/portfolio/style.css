@@ -103,27 +103,46 @@ main section {
   display: flex;
   flex-wrap: wrap;
   width: 75%;
-  gap: 10px;
+  gap: 20px;
+  padding: 20px;
 }
 
-main section img {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: block;
-  flex-shrink: 1;
+main section div {
+  display: grid;
+  gap: 10px;
   height: auto;
   max-height: 17.5rem;
+
+  /* padding: 10px 10px; */
+  /* display: block;
+  flex-shrink: 1; */
+  /* height: auto;
+  max-height: 17.5rem;
   object-fit: cover;
-  object-position: center;
+  object-position: center; */
   /* margin: 0;
   max-width: 100%;
   vertical-align: top;
   width: auto; */
 }
+main section img {
+  /* height: auto; */
+  height: 17.5rem;
+  width: 27.5rem;
+}
 .item1 {
-  flex-grow: 0;
+  grid-column: 1/2;
+  grid-row: 1;
+}
+.item1 {
+  grid-column: 2/3;
+  grid-row: 1;
 }
 
-.item1 {
-  flex-grow: 2;
+/* .item1 {
+  flex: 0 0 100px;
 }
+
+.item2 {
+  flex-grow: ;
+} */
