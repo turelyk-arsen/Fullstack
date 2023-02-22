@@ -50,16 +50,17 @@
         <p>There are trees all over the planet by ours are taller.</p>
       </section>
       <form action="request.php">
-        <div>
-          <label for="username">Enter your participant's name</label>
-          <input type="text" placeholder="John Doe" id="username" required />
+        <div class="form">
+          <div>
+            <label for="username">Enter your participant's name</label>
+            <input type="text" placeholder="John Doe" id="username" required />
+          </div>
+          <div>
+            <label for="date">When do you want to start the adventure ?</label>
+            <input type="text" placeholder="jj/mm/aaaa" id="date" required />
+          </div>
+          <button type="submit">Book</button>
         </div>
-        <div>
-          <label for="date">When do you want to start the adventure ?</label>
-          <input type="text" placeholder="jj/mm/aaaa" id="date" required />
-        </div>
-
-        <button type="submit">Book</button>
       </form>
     </main>
 
