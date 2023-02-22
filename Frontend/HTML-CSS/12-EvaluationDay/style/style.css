@@ -1,0 +1,209 @@
+/* main style  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --grey: #f6f8f9;
+  --red: #fa6980;
+  --dark: #a6adb4;
+  --text: #ffffff;
+  --black: #202124;
+  --grey-text: #a6adb4;
+}
+
+body {
+  background-color: var(--grey);
+  font-family: "Roboto", sans-serif;
+  color: var(--text);
+}
+ul {
+  list-style: none;
+}
+
+/* Header  */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+header img {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+header i {
+  padding: 10px;
+  color: var(--black);
+}
+header ul {
+  display: none;
+}
+
+/* Main  */
+main section {
+  background-image: url(images/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1 {
+  font-family: "Limelight", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  padding: 30px;
+}
+
+hr {
+  width: 40px;
+  height: 2px;
+  border: 2px solid var(--red);
+}
+
+main p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 30px;
+}
+
+/* Main FORM  */
+main form {
+  background: #ffffff;
+  height: 350px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 60px;
+  margin-bottom: 50px;
+
+}
+
+main form div {
+  display: flex;
+  flex-direction: column;
+}
+
+main form label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--black);
+}
+
+main form input {
+  background: #ffffff;
+  border: 3px solid #ebeded;
+  border-radius: 6px;
+  height: 40px;
+  /* width: 300px; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.3333px;
+  line-height: 16px;
+  padding: 5px;
+}
+main form button {
+  background: var(--red);
+  border-radius: 10px;
+  padding: 15px 50px;
+  font-family: "Limelight", cursive;
+  color: var(--text);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  border: none;
+}
+
+/* Footer  */
+footer {
+  background-color: var(--dark);
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: var(--grey);
+  padding: 10px;
+}
+
+/* Tablet (breaks at 720px)  */
+@media screen and (min-width: 720px) {
+  header ul {
+    display: flex;
+    flex-direction: row;
+  }
+  header li a {
+    color: var(--grey-text);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 30px;
+  }
+  header li a.activNav {
+    color: var(--black);
+    text-decoration-line: underline;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  /* header li a.activNav:hover {
+    color: var(--black);
+    background-color: var(--dark);
+    padding: 10px;
+    border-radius: 10px;
+  } */
+
+  header i.fa-solid {
+    display: none;
+  }
+  header img {
+    margin-left: 10px;
+  }
+  main {
+    margin: auto 10px;
+  }
+  ain form button {
+    position: absolute;
+    bottom: -20px;
+    left: 200px;
+  }
+}
+
+/* Desktop (breaks at 1080px)   */
+@media screen and (min-width: 1080px) {
+  header img {
+    margin-left: 30px;
+  }
+  main {
+    display: flex;
+    margin: auto 30px;
+  }
+  main section, main form {
+        width: 100%;
+        height: 500px;
+  }
+}
