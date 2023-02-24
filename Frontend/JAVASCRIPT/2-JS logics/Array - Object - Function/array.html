@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      // Array - store multiple date
+      const fruits = ["Orange", "Banana", 1, 2, true];
+      // array are 0-based
+      console.log(fruits[0]);
+      // the number in the list called INDEX
+      console.table(fruits);
+      console.log(fruits);
+
+      // length of an array
+      console.log(fruits.length);
+
+      // first element
+      console.log(fruits[0]);
+      // last element
+      console.log(fruits[fruits.length - 1]);
+      // write in an array
+      fruits[0] = "kiwi";
+      //CONST!!! fruits = 1; error we can't change TYPE of array to string when it's ARRAY, 
+      // but in array we can change all 
+      console.log(fruits);
+
+      // Multi dimension Array
+      const drawers = [
+        ['phone charger', 'ear buds', 'broken S8'],
+        ['Game controller', '3DS'],
+        [['Attendence', 'evaluations'], 'CVs'],
+        ['usb key', 'keyboard'],
+      ];
+      console.log(drawers[1][1]);
+      console.log(drawers[2][0][0]);
+      console.log(drawers);
+
+    </script>
+  </body>
+</html>

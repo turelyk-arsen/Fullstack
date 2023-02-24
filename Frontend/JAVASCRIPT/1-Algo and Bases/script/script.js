@@ -114,4 +114,11 @@ const money = '' + 1 || (1).toString();
 const currency = + '9' || Number('9');
 console.log(currency);
 
+let budget = 10;
+let sandwich = 4;
+// solution: Become sherlock holmes
+debugger;
+budget = budget + sandwich;
+console.log(budget);
+
 
