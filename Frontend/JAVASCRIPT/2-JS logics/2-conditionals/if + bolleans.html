@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If and bolleans</title>
+</head>
+<body>
+    
+
+    <script>
+        // if (condition) {
+        // } else { }
+        const drawingLevel = 100;
+        // I prefer to do my test  Above the if
+        const drawingSkill = drawingLevel > 50;
+        // if react on truthy / falsy values 
+        if (drawingSkill) {
+            alert('Waw! Amaizing');
+        } else {
+            alert('Go buy some hands');
+        }
+        // falsy -> 0, false, NaN, undefined, null, ''
+        // true -> everything else
+
+        // quiz what's true of false?
+        let somebodyInElevator;  // undefined > falsy -> else
+        somebodyInElevator = ""; // undefined > falsy -> else
+        somebodyInElevator = " " //  true space is a VALUE
+        if (somebodyInElevator) {
+            alert('Hello');
+        } else {
+            alert('who is in the elevator? Ghost?');
+        }
+
+        // one '=' means ASSING
+        // two '==' means test equality
+        // three '===' means test strict equality
+
+        if (friend == 'crabby') {
+            alert('I got am all');
+        } else {
+            alert('Gotta catch them');
+        }
+
+        // Large quality - Quiz 
+        let age = 18;
+        age < 18; // false
+        age > 18; // false
+        age == 18; // true
+        age >= 18; // true
+        age <= 18; // true
+        age => 18; // its a trap! it's a function !!!
+        age == '18'; // true
+        age === '18'; // false
+        age != 28; // true   ! mean NOT
+
+        // strict equality 
+        age === 18; // true
+        age === '18'; // false
+        age !== '18'; // true
+        age !== 18; // false
+
+
+        // ! NOT
+        const thisVariable = 'something';
+        thisVariable; // true it's defined
+        !thisVariable; //false
+        !!thisVariable; // true
+
+        // AND -> &&       --- TRUE-TRUE
+        const teacherHere = true;
+        const CO = true;
+        if (teacherHere && CO) {
+            alert('Course starts');
+        } else {
+            alert('Have a nice holiday');
+        }
+
+        // OR -> ||      --- TRUE-FALSE
+        const igorHere = true;
+        if (teacherHere || igorHere ) {
+            alert('evaluation');
+        }  else {
+            alert('Go Home');
+        }
+
+        // bonus
+        let message;
+        if (age >= 18) {
+            message = "Welcome";
+        } else {
+            message = "Go away";
+        }
+
+        // ternary operator
+        message = (age>18) ? "Welcome" : "Go away";
+
+
+    </script>
+</body>
+</html>

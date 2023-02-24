@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <script>
+      //Every function NEEDS TWO parts
+      // 1- Definition
+      function capital(nameParam) {
+        return nameParam.toUpperCase();
+      }
+
+      // 2- Call the function
+      console.log(capital("asdf"));
+
+      let asdf = "asdf";
+      console.log(capital(asdf));
+
+      //Definition
+      //   function sendEmail(email) {
+      //     const subject = "Welcome to the school";
+      //     const content = "You've be the chosen one.";
+      //     return gmail.send(email, [subject, content]);
+      //   }
+      // Call/use
+      //   sendEmail('alexc123@an.dru'); // you will have an error
+      //   sendEmail('this@an.dru'); // you need more code to send an email
+
+      function addNumber(num1, num2) {
+        let result = num1 + num2;
+        return result;
+      }
+
+      console.log(addNumber(5, 5));
+
+      // 3 different writing
+      function oracle1() {
+        return "maybe";
+      }
+
+      //
+      const oracle2 = function () {
+        return "Maybe";
+      };
+
+      //
+      const oracle3 = () => {
+        // Attention bigger or equal >=
+        return "maybe"; // =/= of equal and bigger then => this is a function
+      };
+
+      //Exercise
+      // 1) Best JB (from yesterday)
+      const best = () => {
+        return "JB";
+      };
+      console.log(best());
+
+      //teacher
+      function bestJB() {
+        return "me";
+      }
+      console.log(bestJB());
+
+      // 2) age calculator from yesterday year of birth
+      const yourAge = (date) => {
+        const result = 2023 - date;
+        return result;
+      };
+      console.log(yourAge(1900));
+
+      //teacher
+      function ageCal(yob) {
+        const age = 2023 - yob;
+        // return an object
+        return {
+          human: age,
+          dog: age * 7,
+          cat: age * 10,
+        };
+      }
+      // or array works also
+      //return [age, age*7, age*10];
+
+      console.log(ageCal(1983));
+
+      // Beware, users are not always nice (malicious)
+      function name(username) {
+        // sanitize
+        return "Hi" + username;
+      }
+    </script>
+  </body>
+</html>
