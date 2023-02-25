@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- # Guess my Number
+
+    1 - Ask one time to the user with a static number
+    2 - You give him 5 shoots to guess the static number
+
+    Bonus 1 : Help the user with "Above", "Below"
+    Bonus 2 - Ask the user his prediction until he find the right number
+    Bonus 3 - Play with random values
+    const rdnNumber = Math.floor(Math.random()\*10); -->
+
+    <script>
+      //   const answer = confirm("Guess the number");
+      //   const rdnNumber = Math.floor(Math.random() * 10);
+      //   for (let i = 5; time.length <6; i--){
+
+      //   }
+      //   if (answer == false) {
+      //     alert("BYE");
+      //   } else {
+      //     let userNumber = parseInt(prompt("Write your number"));
+      //     if (userNumber >= rdnNumber) {
+      //       alert("BIG");
+      //     } else if (userNumber <= rdnNumber) {
+      //       alert("Small");
+      //     } else if (userNumber = rdnNumber) {
+      //       alert("WIN!!!");
+      //     }
+      // else {
+      //   let userNumber = parseInt(prompt("Try again"));
+      // }
+      //   }
+
+      //1.   Teacher  While
+      // const secret = 5;
+      // let lifes = 5;
+      // while (lifes > 0) {
+      //     const guess = prompt(lifes + "lifes - pick another number");
+      //     if (guess == secret ) {
+      //         alert('GG EZ');
+      //         break; // exit the loop
+      //     } else {
+      //         alert('NOOB');
+      //         lifes = lifes -1;
+      //     }
+      // }
+
+      // 2. Teacher FOR
+      //   const secret = 5;
+      //   for (let life = 5; life > 0; life--) {
+      //     const guess = prompt(life + "guess my number");
+      //     if (guess == secret) {
+      //       alert("win");
+      //     } else {
+      //       alert("loose");
+      //     }
+      //   }
+
+      //3. Function
+      const secret = 5;
+      let life = 5;
+      // definition
+      function play() {
+        const guess = prompt("Guess my number");
+        if (guess == secret) {
+          alert("Success");
+        } else {
+          alert("Looser");
+          life--;
+          if (life > 0) {
+            play(); // recursivity - a function that call itself
+          } else {
+            alert("Game Over");
+          }
+        }
+      }
+
+      // call 
+      play();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bonus
+      // fruits.forEach(fruit => sendEmail(fruit));
+
+      // - For property in an object (not that much used)
+      /* --
+                    for (const key in object) {
+                        if (Object.hasOwnProperty.call(object, key)) {
+                            const element = object[key];
+
+                        }
+                    }
+        */
+      const fruits = ["apple", "banana", "cake"];
+      //most used => I dont care about Index
+      for (const fruit of fruits) {
+        console.log(fruit);
+      }
+      // debugger;
+      //you [NEED] the [INDEX] and Value
+      for (let i = 0; i < fruits.length; i++) {
+        const fruit = fruits[i];
+        console.log(i, fruit);
+      }
+
+      // Real life example
+      const usersArray = [
+        { username: "Igor", password: "123" },
+        { username: "SpngeBob", password: "Patrick1" },
+        { username: "Morty", password: "Rick" },
+        { username: "mobyDick", password: "itsnovel" },
+      ];
+
+      // Algorythm -> alert users about weakness of password (length <4)
+      for (const user of usersArray) {
+        const weakPass = user.password.length < 4;
+        if (weakPass) {
+          alert("Change your passwordk: " + user.username);
+        }
+      }
+
+      const weakPass = user.password.length < 4;
+
+      // exercice how to ban a user with username that contains dick
+      for (const dude of userArray) {
+        const lowerName = dude.username.toLowerCase();
+        const bad = lowerName.includes("dick");
+        if (bad) {
+          alert("Ya Ban" + dude.username);
+        }
+      }
+    </script>
+  </body>
+</html>

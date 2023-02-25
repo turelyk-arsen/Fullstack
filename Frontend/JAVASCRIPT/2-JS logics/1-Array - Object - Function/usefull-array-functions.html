@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //Must known functions/methods
+        const menu = ['salada', 'antipasti', 'piatti', 'desert'];
+
+        // ! find something - indexof()
+        menu.indexOf('salada');       // -> 0
+        menu.indexOf('limoncello');   // -> -1
+        menu.includes('salada');      // -> true
+
+        // .slice()
+        // I store in a 'box' labelled 'piattiIndex' (camlCase)
+        // in this case, the value of thos variable is : 2 (number)
+
+        const piattiIndex = menu.indexOf('piatti'); // index 2
+
+        // exercise : how to delet the first element?
+        console.log(menu.slice(1));
+
+        // exercise inject 'soupa' at the begining of the menu (array)
+        // console.log(menu.slice(0,0, 'soupa'));
+
+        // USEFUL
+        // push()    -> add at the end
+        // unshift() -> add at the begininng
+        // pop()     -> remove last element
+        // shift()   -> remove the first element
+        // concat()  -> merge two arrays
+        // flat()    -> flatten a multi dimensional array
+        
+        console.log(menu);
+        console.log(menu.shift(1));
+        console.log(menu);
+        console.log(menu.unshift('salada'));
+        console.log(menu);
+
+
+
+    </script>
+</body>
+</html>

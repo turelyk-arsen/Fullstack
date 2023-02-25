@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+
+
+    <script>
+      const fridge = {
+        color: "red",
+        temperature: 4,
+        beverages: ["water", "bears"],
+        owner: {
+          name: "Gabriel Abreu Damaso",
+          location: "none of your business :D"
+        }
+      };
+      console.log(fridge);
+      console.log(fridge.color);
+      console.log(fridge.owner.name);
+      console.log(fridge.beverages[1]);
+
+      const kitchen = ['Table', 'Chair', fridge];
+      console.log(kitchen[2].temperature);
+
+      // disable modification of an object
+      fridge.color = 'blue';
+      console.log(fridge.color);
+      Object.freeze(fridge);
+      fridge.color = 'green';
+      console.log(fridge); // modif not working
+
+      // In real life most of your interaction will be with object
+      document.write('hello');
+      Math.random();
+      [123, 34].length;
+      // you will use JSON -> JavaScript object Notation
+
+    </script>
+  </body>
+</html>
