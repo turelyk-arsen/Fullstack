@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* header  */
+header {
+  background-image: url(images/Bg.png);
+  background-position: center;
+  background-size: cover;
+  height: 750px;
+  text-align: center;
+  box-shadow: 0 100px 100px rgba(0, 0, 0, 0.76) inset;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+nav ul li a {
+  padding: 10px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+nav ul i {
+  color: #dab33e;
+  font-size: 1.5rem;
+}
+
+header h1 {
+  padding-bottom: 50px;
+  padding-top: 100px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 5.5rem;
+}
+header div {
+  padding-top: 80px;
+}
+
+header div > a {
+  text-decoration: none;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+header div > a:first-of-type {
+  background-color: #00000070;
+  padding: 15px 45px;
+  margin-right: 10px;
+}
+header div > a:first-of-type:hover {
+  background-color: #000000a9;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.671);
+}
+
+header div > a:last-of-type {
+  background-color: #ffffff70;
+  padding: 15px 35px;
+  margin-left: 10px;
+}
+
+header div > a:last-of-type:hover {
+  background-color: #ffffffc5;
+  text-decoration: underline;
+  color: rgb(83, 83, 83);
+}
+
+/* main  */
+/* 1111111  */
+#first {
+  height: 700px;
+  background-image: url(images/Section\ Background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#first > div {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 50px 0;
+  gap: 20px;
+}
+
+#first h2 {
+    color: #dab33e;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2.5rem;
+  padding: 30px 0;
+}
+
+#first p {
+    padding: 60px 0;
+}
+#first div div {
+    text-align: center;
+}
