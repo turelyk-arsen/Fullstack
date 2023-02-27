@@ -77,15 +77,24 @@
         document.querySelector('#acknowledgement').checked = false;
         document.querySelector('button').disabled = true;
 
+        // DOES NOT WORD
+        let elementValue = document.querySelector('input').value;
+        elementValue = "not working";
+
+        let element = document.querySelector('input');
+        element.value = "working";
+        // works as well
+        document.querySelector('input').value = "Working";
 
 
+        //  MODIFY TEXT AND STYLE
+        document.querySelector('h1').textContent = 'Hi<em>ch</em>am';
+        document.querySelector('h1').innerText = 'Hi<em>ch</em>am';
+        document.querySelector('h1').innerHTML = 'Hi<em>ch</em>am';
 
-
-
-
-
-
-    </script>
+        document.querySelector('h1').style.textAlign = 'right';
+        document.querySelector('h1').style.color = 'blue';
+           </script>
     
 </body>
 </html>

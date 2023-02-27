@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #message {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .close {
+        color: red;
+      }
+
+      .myclose {
+        color: red;
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      .open {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Exercise 
+        first is open from 11h to 14h
+        then  - open also from 19h to 23h
+        -----------------------------------
+        bonus: hurry telling the user that the restaurant close in  {add time} ..less than 30min 
+    // above 13:30 // 22:30 -->
+    <h1>Rest'o'Ranch</h1>
+    <p id="message">Open/Close</p>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+
+    <script>
+      const hours = new Date();
+      const minutes = new Date();
+      let timeHour = hours.getHours();
+      let timeMinutes = minutes.getMinutes();
+      document.querySelector("#demo2").innerHTML = timeHour;
+      document.querySelector("#demo3").innerHTML = timeMinutes;
+    //   timeHour = 13;
+
+      if (11 <= timeHour < 12 || 19 <= timeHour <= 23) {
+        document.querySelector("#message").classList.add("open");
+      } else {
+        document.querySelector("#message").classList.add("close");
+      }
+
+      if (
+        (12 <= timeHour && 30 <= timeMinutes) ||
+        (22 <= timeHour && 30 <= timeMinutes)
+      ) {
+        document.querySelector("#demo").innerHTML = "<h2>HURRY UP</h2>";
+        document.querySelector("#demo").classList.add("myclose");
+      } else {
+        document.querySelector("#demo").innerHTML = "";
+      }
+
+      //   if (11 <= timeHour <= 14 || 19 <= timeHour <= 23) {
+      //     document.querySelector("#message").classList.add("open");
+      //   } else if (11 <= timeHour && 30 <= timeMinutes || 22 <= timeHour && 30 <= timeMinutes) {
+      //     document.querySelector("#demo").innerHTML = "<h2>HURRY UP</h2>";
+      //     document.querySelector("#demo").classList.add("myclose");
+      //   } else {
+      //     document.querySelector("#demo").innerHTML = "";
+      //     document.querySelector("#message").classList.add("close");
+      //   }
+    </script>
+  </body>
+</html>
