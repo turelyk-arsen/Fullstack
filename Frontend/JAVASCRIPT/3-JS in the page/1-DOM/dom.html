@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        .centered {
+            text-align: center;
+            text-decoration: underline;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DOM</h1>
+    <p>paragraphe</p>
+    <p>paragraphe</p>
+    <p>paragraphe</p>
+
+    <input type="email" name="" id="usermail" value="igor.marty@live.fr">
+    <input type="checkbox" name="ack" id="acknowledgement" checked>
+    <button type="submit">Send</button>
+
+    <script>
+        // DOM -- document object model -  the all web page
+        document.write('Hello');
+
+
+        // Select
+
+        // Select one
+        // uses CSS selectors
+        // -> https://flukeout.github.io/
+
+        const myHeading = document.querySelector('h1');
+
+        // select multiple -> array
+        const allPara = document.querySelectorAll('p');
+        const allSelectors = document.querySelectorAll('main section.card>h2');
+        const firstP = document.querySelectorAll('p')[0]; // select first p like an array
+
+        // old writing
+        const oldId = document.getElementById('logo');
+        const oldClss = document.getElementsByClassName('card');
+        const oldTag = document.getElementsByTagName('p');
+
+
+        // READ
+        const mailId = document.querySelector('#usermail').id; // take in input only ID
+        const mailElement = document.querySelector('#usermail');  // take all input!!!
+        const shortId = mailElement.id;
+        const shortType = mailElement.type;
+        const shortName = mailElement.name;
+        const shortValue = mailElement.value; // extremely userfull !!!
+        const longValue = document.querySelector('input').value;
+        const longChecked = document.querySelector('[type="checkbox"]').checked;
+
+        // CSS class -> classname,  .classList = a read only property 
+        // that is used to return CSS class (in a form an array)
+        document.querySelector('h1').classList.add('centered'); // add the class in the 
+        document.querySelector('h1').classList.remove('centered'); // remove the chosen class
+        document.querySelector('h1').classList.toggle('centered'); // toggle between show and hide
+
+        const isCentered = document.querySelector('h1').classList.contains('centered');
+        // .contains = determines whether the collections contains a given item or not
+        // if it contains the item then returns TRUE otherwise FALSE
+
+
+        // MODIFY
+        document.querySelector('input').value = 'el_humbre@caliente.es';
+        document.querySelector('input').id = 'myInput';
+        document.querySelector('input').type = 'password';
+        document.querySelector('#acknowledgement').checked = false;
+        document.querySelector('button').disabled = true;
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
