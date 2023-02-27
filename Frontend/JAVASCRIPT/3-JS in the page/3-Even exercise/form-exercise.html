@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#.php" id="form">
+      <label>Name</label> <br />
+      <input type="text" id="name" /> <br />
+
+      <label>Email</label> <br />
+      <input type="email" id="email" /> <br />
+
+      <label>Phone number</label> <br />
+      <input type="number" id="tel" /> <br />
+      <br />
+
+      <button type="submit">Send</button>
+    </form>
+
+    <script>
+      //         When the form is submitted
+      //   - GATHER :
+      //       get the #name input,
+      //       input value
+      //       and length of this input value
+      //  - LOGIC : check if the name length if above 4
+      //  - DISPLAY :
+      //               put a green border if valid
+      //               put a red border if wrong
+      // MEDIUM : check for the phone tel to have exactly than 9 characters
+
+      //ADVANCED : The email should contain a "@" AND a dot "."
+      // HINT : use .indexOf('.') > -1 // includes('.')
+
+      // BONUS : Verify this "on the fly" using the input "keyup" event
+
+      const userInput = document.querySelector("#name");
+      const userTel = document.querySelector("#tel");
+      const userEmail = document.querySelector("#email");
+
+      document
+        .querySelector("#form")
+        .addEventListener("submit", function (event) {
+          const userName = userInput.value;
+          const tel = userTel.value;
+          const email = userEmail.value;
+
+          if (userName.length > 4) {
+            userInput.style.borderColor = "green";
+          } else {
+            userInput.style.borderColor = "red";
+          }
+
+          if (tel.length > 9) {
+            userTel.style.borderColor = "green";
+          } else {
+            userTel.style.borderColor = "red";
+          }
+
+          if (email.indexOf(".") >=0 || email.indexOf("@") >= 0) {
+            userEmail.style.borderColor = "green";
+          } else {
+            userEmail.style.borderColor = "red";
+          }
+        });
+    </script>
+  </body>
+</html>

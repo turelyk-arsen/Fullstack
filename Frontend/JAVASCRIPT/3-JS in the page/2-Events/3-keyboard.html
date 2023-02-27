@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keyboard</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <form action="request.php">
-        <label for="username">Username</label>
-        <input type="text" name="" id="username" required>
-        <button type="submit" disabled>Send</button>
+      <label for="username">Username</label>
+      <input type="text" name="" id="username" required />
+      <button type="submit" disabled>Send</button>
     </form>
-    
 
     <script>
-        
+      // event on keyboard
+      const usernameInput = document.querySelector("#username");
+      const formElement = document.querySelector("form");
+      const buttonElement = document.querySelector("button");
+
+      // on keyup it enable my button
+      function checkUsername(event) {
+        const userValue = usernameInput.value;
+        console.log(userValue);
+
+        if (userValue.length > 6) {
+          buttonElement.disabled = false;
+        } else {
+          buttonElement.disabled = true;
+        }
+      }
+
+      usernameInput.addEventListener('keyup', checkUsername);
+
     </script>
-</body>
+  </body>
 </html>
