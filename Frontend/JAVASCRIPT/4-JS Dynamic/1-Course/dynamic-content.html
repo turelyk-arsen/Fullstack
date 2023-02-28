@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content</title>
+</head>
+<body>
+    <h1>Dynamic</h1>
+    <section></section>
+
+    <script>
+        const articlesArray = [
+            {
+                title: 'I love HTML',
+                content: 'HTML is a very nice programming language...',
+                category: 'fake',
+            },
+            {
+                title: 'I love CSS',
+                content: 'CSS is a very nice programming language...',
+                category: 'fake',
+            },
+            {
+                title: 'I love JS',
+                content: 'HTML and CSS are not real programming language OMG FAKE NEWS',
+                category: 'leaks',
+            },
+        ];
+
+        // I want to dynamically add this content to my section.
+        // TWO solutions to that
+        // First : I code everything because I can
+        
+        for (const articleData of articlesArray) {
+            // [articles]
+            const articleHTML = document.createElement('article');
+            document.querySelector('section').append(articleHTML);
+            articleHTML.classList.add(articleData.category);
+
+            // <h2>
+                //1 create
+                const headingHTML = document.createElement('h2');
+                // 2 append
+                articleHTML.append(headingHTML);
+                // 3 customize
+                headingHTML.innerText = articleData.title;
+
+                // p
+                const paragraHTML = document.createElement('p');
+                articleHTML.append(paragraHTML);
+                paragraHTML.innerText = articleData.content;
+
+        }
+    </script>
+    
+</body>
+</html>
