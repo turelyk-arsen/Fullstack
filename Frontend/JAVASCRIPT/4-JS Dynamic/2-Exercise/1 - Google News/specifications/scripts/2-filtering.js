@@ -39,7 +39,7 @@
 //   }
 // }
 
-// 1-Form
+// 1-Form  i write after teacher
 document.querySelector("form").addEventListener("submit", function (event) {
   // 3- prevent
   event.preventDefault();
@@ -53,7 +53,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
   }
   // show
   // const selectedArticles = document.querySelectorAll('.' + catValue);
-  let selectedArticles = document.getElementByClassName(catValue);
+  let selectedArticles = document.getElementsByClassName(catValue);
   if (catValue == "all") {
     selectedArticles = allArticles;
   }
@@ -61,3 +61,33 @@ document.querySelector("form").addEventListener("submit", function (event) {
     element.style.display = "";
   }
 });
+
+
+// //1 - Form teacher
+// document.querySelector('form')
+//     //submit
+//     .addEventListener('submit', function (event){
+//         // 3- prevent! 
+//         event.preventDefault();
+//         //input/gather
+//         const catValue = document.querySelector("#category").value;
+//         console.log(catValue); // all/science/politics
+//         // hide
+//         const allArticles = document.querySelectorAll('article');
+//         for (const element of allArticles){
+//             element.style.display = 'none';
+//         }
+
+//         // show
+//         //const selectedArticles = document.querySelectorAll('.' + catValue);
+//         // another piece of vocabulary 
+//         let selectedArticles = document.getElementsByClassName(catValue);
+//         if (catValue == 'all'){
+//             selectedArticles = allArticles;
+//         }
+//         for (const element of selectedArticles){
+//             element.style.display = '';
+//         }
+
+
+// })
