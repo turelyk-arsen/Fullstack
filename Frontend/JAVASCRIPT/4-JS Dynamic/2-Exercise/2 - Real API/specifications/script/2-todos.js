@@ -9,7 +9,10 @@ function createTodos(filteredTodos) {
   /* create a <li> for each todo of the TodoArray */
   /* this li will contains the 'title' of the todo */
   /* If the todo is completed (boolean) cross it with a line-through */
+
+
 }
+
 
 /*  BONUS 1 - Modify the createTodos function
 to put the completed todos inside the #done <section> */

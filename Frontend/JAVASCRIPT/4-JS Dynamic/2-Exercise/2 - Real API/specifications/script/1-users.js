@@ -12,17 +12,14 @@
 
 function createUsers(usersArray) {
   console.log(usersArray);
+
+  for (const user of usersArray) {
+    
+    const mockOption = document.querySelector("option");
+    const clonedOption = mockOption.cloneNode(true);
+    document.querySelector("select").append(clonedOption);
+
+    clonedOption.innerText = user.name;
+    clonedOption.value = user.id;
   }
-
-
-const template = document.querySelector("usersSelect");
-
-  for (const data of usersArray) {
-    const clone = template.cloneNode(true);
-    document.querySelector("option").append(clone);
-
-    // clone.querySelector("h2").innerText = data.title;
-    // clone.querySelector("p").innerText = data.content;
-    // // change the css class of the article
-    // clone.classList.add(data.category);
-  }
+}
