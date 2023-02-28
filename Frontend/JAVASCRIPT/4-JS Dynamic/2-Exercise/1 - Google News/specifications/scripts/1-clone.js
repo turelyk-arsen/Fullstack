@@ -13,11 +13,30 @@ Hint :
 1 - Use the cloning method to generate the cloned <article>s
 */
 
-const template = document.querySelector('#trending article');
-for (const data of articlesArray) {
-    const clone = template.cloneNode(true);
-    document.querySelector('section').append(clone);
+// my part
+// const template = document.querySelector('#trending article');
+// for (const data of articlesArray) {
+//     const clone = template.cloneNode(true);
+//     document.querySelector('section').append(clone);
 
+//     clone.querySelector('h2').innerText = data.title;
+//     clone.querySelector('p').innerText = data.content;
+//     clone.querySelector('a').href = data.url;
+
+//     clone.classList.add(data.category);
+// }
+
+// template.remove();
+
+
+const original = document.querySelector('#trending article');
+
+for (const data of articlesArray) {
+    // clone
+    const clone = original.cloneNode(true);
+    // append
+    document.querySelector('section#trending').append(clone);
+    // customize
     clone.querySelector('h2').innerText = data.title;
     clone.querySelector('p').innerText = data.content;
     clone.querySelector('a').href = data.url;
@@ -25,4 +44,4 @@ for (const data of articlesArray) {
     clone.classList.add(data.category);
 }
 
-template.remove();
+original.remove();
