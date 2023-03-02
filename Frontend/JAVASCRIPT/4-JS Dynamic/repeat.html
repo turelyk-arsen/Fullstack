@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .myheading {
+        text-align: center;
+        font-size: 2rem;
+        color: darkgray;
+      }
+      .button {
+        float: right;
+        background-color: green;
+      }
+      .block {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        background-color: white;
+      }
+
+      section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10px;
+      }
+      .card {
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      #one, .One {
+        border: none;
+        border-bottom: 5px solid aqua;
+      }
+      #two, .Two {
+        border: none;
+        border-bottom: 5px solid blue;
+      }
+      #three, .Three {
+        border: none;
+        border-bottom: 5px solid violet;
+      }
+      #all {
+        border: none;
+        border-bottom: 5px solid fuchsia;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="card">
+        <h2></h2>
+        <img src="" alt="" />
+        <p></p>
+      </div>
+    </section>
+
+    <button id="one">One</button>
+    <button id="two">Two</button>
+    <button id="three">Three</button>
+    <button id="all">All</button>
+
+    <script>
+      const heading = document.createElement("h1");
+      document.querySelector("body").append(heading);
+      heading.innerText = "My heading";
+
+      heading.classList.add("myheading");
+      heading.id = "h1";
+      document.querySelector("body").style.backgroundColor = "lightgray";
+
+      const button = document.createElement("button");
+      document.querySelector("body").append(button);
+      button.innerText = "Sign in";
+      button.classList.add("button");
+      button.id = "button";
+
+      const block = document.createElement("div");
+      document.querySelector("body").append(block);
+      //   block.classList.add("block");
+
+      button.addEventListener("click", function () {
+        block.classList.toggle("block");
+      });
+
+      const myArraysddd = [
+        {
+          title: "One",
+          content: "Lorem ipsum dolor sit amet.",
+          image: "https://picsum.photos/200",
+        },
+        {
+          title: "Two",
+          content: "Lorem ipsum dolor sit amet.",
+          image: "https://picsum.photos/200",
+        },
+        {
+          title: "Three",
+          content: "Lorem ipsum dolor sit amet.",
+          image: "https://picsum.photos/200",
+        },
+      ];
+
+      const card = document.querySelector(".card");
+
+      for (const myAR of myArraysddd) {
+        const divHTMLClone = card.cloneNode(true);
+        document.querySelector("section").append(divHTMLClone);
+        divHTMLClone.classList.add("card");
+
+        divHTMLClone.querySelector("h2").innerText = myAR.title;
+        divHTMLClone.querySelector("p").innerText = myAR.content;
+        divHTMLClone.querySelector("img").src = myAR.image;
+        divHTMLClone.classList.add(myAR.title);
+      }
+
+      card.remove();
+
+      document.querySelector("#one").addEventListener("click", function () {
+        hide(".One");
+      });
+
+      document.querySelector("#two").addEventListener("click", function () {
+        hide(".Two");
+      });
+
+      document.querySelector("#three").addEventListener("click", function () {
+        hide('.Three');
+      });
+
+      document.querySelector("#all").addEventListener("click", function () {
+        // hide();
+        show("div.card");
+      });
+
+      function hide(selector) {
+        const cardHide = document.querySelector(selector);
+        cardHide.style.display = "none";
+
+        // const cardHide = document.querySelectorAll(selector);
+        // for (const cardHTML of cardHide) {
+        //     cardHTML.style.display = 'none';
+        // }
+      }
+
+      function show(selector) {
+        const matchCard = document.querySelectorAll(selector);
+        for (const matchHTML of matchCard) {
+          matchHTML.style.display = "";
+        }
+      }
+    </script>
+  </body>
+</html>
