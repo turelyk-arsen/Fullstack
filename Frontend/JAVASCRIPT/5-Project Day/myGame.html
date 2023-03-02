@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cuby {
+        background-color: lightblue;
+        height: 80px;
+        width: 80px;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 2rem;
+        user-select: none;
+        /* standard  */
+        position: absolute;
+        top: 70px;
+        left: 500px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+      section {
+        width: 1000px;
+        height: 1000px;
+        border: 5px dashed black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://igor-marty.notion.site/JS-Team-Project-cbc9df4c291a4075a2ee6d9eda13bf96 -->
+    <section>
+        <div class="cuby">o_o</div>
+      <h1>Restart</h1>
+      <h3 class="usernameMouse"></h3>
+      <h3 class="usernameKey">Keyboard</h3>
+    </section>
+    <article>
+      <div></div>
+    </article>
+
+    <script>
+      const duck = document.querySelector(".cuby");
+
+      let posLeft = 0;
+      let posTop = 7;
+
+      document.addEventListener("keydown", cubeMove);
+
+      function cubeMove(event) {
+        if (event.key == "ArrowDown") {
+          posTop++;
+          // console.log(posTop);
+        }
+        duck.style.top = posTop + "%";
+
+        if (posTop >= 91) {
+          posTop = 7;
+        }
+      }
+
+      let numberWin = 0;
+
+      function touched() {
+        duck.style.backgroundColor = "red";
+        duck.innerText = "X_X";
+
+        let userName = prompt("What's your name?");
+        let showName = document.querySelector(".usernameMouse");
+        numberWin = 1; 
+        showName.innerText += "Mouse  " + userName + "Score  " + numberWin;
+
+        alert("The game is over");
+        duck.removeEventListener("click", touched);
+        document.removeEventListener("keydown", cubeMove);
+      }
+      duck.addEventListener("click", touched);
+
+      let myTimeout = setTimeout(myStop, 5000);
+
+      let numberKeyWin = 0;
+      function myStop() {
+        if (myTimeout) {
+          duck.style.backgroundColor = "green";
+          document.removeEventListener("keydown", cubeMove);
+          alert("The game is over! victory of the player at the keyboard");
+          
+          let usernameKey = prompt("What's your name?");
+          let showNameKey = document.querySelector(".usernameKey");
+          numberKeyWin = 1;
+          // numberWin++;
+
+          showNameKey.innerText +=
+            "Keyboard " + usernameKey + "Score " + numberKeyWin;
+        }
+      }
+
+      document.addEventListener('click', function () {
+        duck.style.top = 7 + "%";
+        duck.style.backgroundColor = "lightblue";
+        document.addEventListener("keydown", cubeMove);
+
+      });
+
+
+
+      // showName.innerText = 'Mouse '+ userName + 'Score ' + numberWin;
+
+      //       const myTimeout = setTimeout(myGreeting, 3000);
+
+      // function myGreeting() {
+      //   document.getElementById("demo").innerHTML = "Happy Birthday!"
+      // }
+      // duck.removeEventListener("keydown", cubeMove);
+      // duck.removeEventListener("keydown", cubeStop);
+      // function cubeStop (event) {
+      //   if (event.key == "ArrowDown") {
+      //   duck.style.top = 0 + "%";
+      //   }
+      // }
+
+      // function fear() {
+      //   duck.style.backgroundColor = "orange";
+      //   duck.innerText = "O_O";
+      // }
+      // duck.addEventListener("mousemove", fear);
+
+      // function relax() {
+      //   duck.style.backgroundColor = 'lightblue';
+      //   duck.innerText = 'o_o';
+      // }
+      // duck.addEventListener('mouseleave', relax);
+
+      //   document.addEventListener('mousemove', function (event) {
+      //     cuby.style.top = event.clientY + 'px';
+      //     cuby.style.left = event.clientX + 'px';
+      //   });
+    </script>
+  </body>
+</html>
