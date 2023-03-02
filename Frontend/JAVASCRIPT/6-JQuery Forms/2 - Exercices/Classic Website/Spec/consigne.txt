@@ -19,3 +19,5 @@ Work in the scripts/main.js
     {{name}}, your message {{message}} has been sent. 
     You will be contact soon on the mail address {{email}} 
     about {{subject}} 
+
+    https://igor-marty.notion.site/JS-JQuery-Ultimate-Recap-of-Doom-857967744e3d4f70ad4fe437b602b765
