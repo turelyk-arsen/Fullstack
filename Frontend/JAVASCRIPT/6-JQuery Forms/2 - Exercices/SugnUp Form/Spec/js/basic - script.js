@@ -13,7 +13,7 @@ $("#pswd").on("focus", function () {
   $("#pswd_info").show(1000);
 });
 
-$("pswd").on("blur", function () {
+$("#pswd").on("blur", function () {
   $("#pswd_info").hide(1000);
 });
 
@@ -64,13 +64,29 @@ $("#pswd").on("keyup", function (event) {
 // All cases to check
 // check for matching of confirmation
 
-$("#submit").on("submit", function (event) {
+$("form#signUp").on("submit", function (event) {
   event.preventDefault();
   const pass = $("#pswd").val();
   const passConfirm = $("#pswdConfirm").val();
-  const passValid = pass === passConfirm;
-  const result = passValid ? "green" : "red";
-  $("#pswdConfirm").css({
-    color: result,
-  });
+
+  const capitalValid = pass.match(/[A-Z]/);
+  const letterValid = pass.match(/[A-z]/);
+  const digitValid = pass.match(/\d/);
+  const lengthValid = pass.length >= 8;
+
+  const matchingPWD = pass === passConfirm;
+  const allIsGood = capitalValid && letterValid && digitValid && lengthValid && matchingPWD;
+
+  if (allIsGood) {
+    $(this).html('<h2> You are registered correctly </h2>');
+  } else {
+    alert ('What is wrong with you');
+  }
+  // const passValid = pass === passConfirm;
+  // const result = passValid ? "green" : "red";
+  // $("#pswdConfirm").css({
+  //   borderColor: result, 
+  // });
+
+
 });

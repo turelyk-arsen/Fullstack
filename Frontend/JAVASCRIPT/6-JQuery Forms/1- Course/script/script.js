@@ -50,7 +50,7 @@ $("h2").eq(2).text("I am the 3 h2");
 // });
 
 $("form").on("submit", function (event) {
-
+  event.preventDefault();
   const name = $("#username").val();
   const nameValid = name.length > 6;
   if (nameValid) {
