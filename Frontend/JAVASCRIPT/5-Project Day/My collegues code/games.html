@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #duck {
+        height: 80px;
+        width: 80px;
+        color: white;
+        background-color: burlywood;
+        text-align: center;
+        border-radius: 15px;
+        font-size: 30px;
+
+        /* suivi de l'exercice cube */
+
+        position: absolute;
+        top: 0%;
+        left: 10%;
+        cursor: pointer;
+      }
+
+      #playground {
+        width: 400px;
+        height: 400px;
+        border: 2px dotted grey;
+        border-radius: 15px;
+        margin: auto;
+        position: relative;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="timer">
+      <p id="secs"></p>
+      <h2 id="end"></h2>
+    </div>
+
+    <h1 id="timer">30 seconds</h1>
+
+    <div id="playground">
+      <div id="duck">
+        >o) <br />
+        (_>
+      </div>
+    </div>
+
+    <script>
+      const playerKeyboard = document.querySelector("#duck");
+
+      let posTop = 0;
+      let posLeft = 0;
+
+      document.addEventListener("keydown", move);
+
+      playerKeyboard.addEventListener("click", touched);
+
+      function move(event) {
+        if (event.key === "ArrowDown") {
+          posTop += 10;
+          playerKeyboard.style.top = posTop + "%";
+
+          if (posTop >= 90) {
+            posTop = 0;
+            playerKeyboard.style.top = posTop + "%";
+          }
+        }
+
+        if (event.key === "ArrowRight") {
+          posLeft += 10;
+          playerKeyboard.style.left = posLeft + "%";
+
+          if (posLeft >= 90) {
+            posLeft = 0;
+            playerKeyboard.style.left = posLeft + "%";
+          }
+        }
+      }
+
+      function touched() {
+        document.removeEventListener("keydown", move);
+        playerKeyboard.removeEventListener("click", touched);
+        playerKeyboard.style.backgroundColor = "red";
+        playerKeyboard.innerText = ">x)   (_>";
+      }
+
+      /* TIMER */
+
+      // Set the timer to 30 seconds (30000 milliseconds)
+      var timeLeft = 30;
+      var timer = setInterval(function startTimer() {
+        // Decrement the timeLeft variable
+        timeLeft--;
+
+        // Display the remaining time on the web page
+        document.getElementById("timer").innerHTML = timeLeft + " seconds";
+
+        // If the timer reaches 0, stop the interval and display a message
+        if (timeLeft === 0) {
+          clearInterval(timer);
+          document.getElementById("timer").innerHTML = "Time's up!";
+        }
+      }, 1000);
+
+      document.addEventListener("keydown", function () {
+        startTimer();
+      });
+    </script>
+  </body>
+</html>
+
+    
+    
