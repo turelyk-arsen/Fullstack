@@ -7,6 +7,17 @@ body {
   background: #000122;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 50px;
+}
+
+nav img:first-of-type {
+  width: 50%;
+}
+
 div {
   margin-top: 100px;
   border-radius: 20px;
@@ -125,4 +136,8 @@ article h4 {
 footer {
     height: 80px;
     background: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }

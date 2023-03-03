@@ -52,8 +52,11 @@ for (const userData of goalsArray) {
   let length = (userData.current / userData.goal) * 100;
   clone.find("#myBar").width(length + "%");
 
-  const section = $("section");
-  section.find("article").addClass([userData.riched]);
+//   const section = $("section");
+//   section.find("article").addClass([userData.riched]);
+
+// clone.find("article").addClass([userData.riched]);
+// $("article").addClass([userData.riched]);
 
   // optional add on event to a clone
   clone.on("click", function () {
@@ -70,6 +73,9 @@ for (let i = 0; i < goalsArray.length; i++) {
   if (goalsArray[i].riched == false) {
     numFalse++;
     numTrue = goalsArray.length - numFalse;
+    $("article").eq(i).addClass([goalsArray[i].riched]);
+  } else {
+    $("article").eq(i).addClass([goalsArray[i].riched]);
   }
 }
 
