@@ -4,7 +4,7 @@ const goalsArray = [
     picture: "images/goals/maserati.png",
     goal: 85000,
     current: 68000,
-    riched: "false",
+    riched: false,
   },
   {
     name: "Playstation 4",
@@ -44,19 +44,20 @@ for (const userData of goalsArray) {
   $("section").append(clone);
   // 3 - customize
   clone.find("h2").text(userData.name);
-  clone.find("h3").text("$" + userData.goal);
-  clone.find("h4").text("$" + userData.current);
+  clone.find("h4").text("$" + userData.goal);
+  clone.find("h3").text("$" + userData.current);
 
   clone.css("background-image", "url(" + userData.picture + ")");
 
   let length = (userData.current / userData.goal) * 100;
   clone.find("#myBar").width(length + "%");
 
-//   const section = $("section");
-//   section.find("article").addClass([userData.riched]);
-
+  // NOT 
 // clone.find("article").addClass([userData.riched]);
 // $("article").addClass([userData.riched]);
+
+// DO well /// I use - for if 
+// clone.addClass([userData.riched]);
 
   // optional add on event to a clone
   clone.on("click", function () {
@@ -66,6 +67,7 @@ for (const userData of goalsArray) {
 }
 // kill the model
 model.remove();
+
 let numTrue = 0;
 let numFalse = 0;
 
@@ -83,14 +85,26 @@ $("#add").text("ADD " + goalsArray.length);
 $("#new").text("NEW " + numFalse);
 $("#reached").text("REACHED " + numTrue);
 
+// filtering 
 $("#add").on("click", function () {
-  $("article").fadeIn("2000");
+ $('button').removeClass('selected');
+ $(this).addClass('selected');
+
+  $("article").slideDown("2000");
 });
 
 $("#new").on("click", function () {
-  $(".true").fadeOut("2000");
+  $('button').removeClass('selected');
+  $(this).addClass('selected');
+
+  $(".true").slideUp("2000");
+  $(".false").slideDown("2000");
 });
 
 $("#reached").on("click", function () {
-  $(".false").fadeOut("2000");
+  $('button').removeClass('selected');
+  $(this).addClass('selected');
+
+  $(".true").slideDown("2000");
+  $(".false").slideUp("2000");
 });
