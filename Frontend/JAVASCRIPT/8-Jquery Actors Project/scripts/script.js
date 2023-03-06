@@ -23,7 +23,7 @@ $(".mybutton .btn").on("click", function (event) {
   // console.log(selectOption);
 
   $(".card").hide();
-  $("." + selectCat).slideDown(2000);
+  $("." + selectCat).slideDown(1000);
   $("#inputState").val(selectCat);
 
   //   $("option:selected").removeAttr("selected");
@@ -43,21 +43,53 @@ for (const actorName of actorsArray) {
 // newActor.remove();
 
 $(".card").on("click", function (event) {
-  $('.card').removeClass('bg-primary text-white');
+  $(".card").removeClass("bg-primary text-white");
   $(this).addClass("bg-primary text-white");
-  
-  const selectedActor = $(this).find('h5').text();
-  $('#inputActors').val(selectedActor);
+
+  const selectedActor = $(this).find("h5").text();
+  $("#inputActors").val(selectedActor);
 });
 
 $("#submit").on("click", function (event) {
   event.preventDefault();
   const actorName = $("#inputActors").val();
-  console.log(actorName);
 
   $(".form").html(
     "<article class='display-6'> Sorry, " +
       actorName +
       " is not currently available. You will be contacted as soon as possible.</article>"
   );
+});
+
+$("#inputState").on("click", function () {
+  const optionIs = $(this).val();
+  $(".btn").val(optionIs);
+  $(".card").hide();
+  $("." + optionIs).show();
+});
+
+$("#inputActors").on("click", function () {
+  let actorChoose = $("#inputActors").val();
+
+  if (
+    actorChoose == ("magnus jensen") ||
+    actorChoose == ("richard bradley") ||
+    actorChoose == ("eduardo martin")
+  ) {
+    $(".card").hide();
+    $(".male").show();
+    $("#inputState").val("male");
+  } else if (
+    actorChoose === "norah faure" ||
+    actorChoose === "rose clarke" ||
+    actorChoose === "adeline mathieu"
+  ) {
+    $(".card").hide();
+    $(".female").show();
+    $("#inputState").val("female");
+  } else {
+    $(".card").hide();
+    $(".baby").show();
+    $("#inputState").val("baby");
+  }
 });
