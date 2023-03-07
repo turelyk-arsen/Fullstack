@@ -1,0 +1,69 @@
+body {
+  padding-bottom: 1000px;
+}
+main {
+  width: 1000px;
+  margin: auto;
+}
+
+nav,
+section#cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+section#cards article {
+  width: 21%;
+  position: relative;
+}
+
+section#cards article img {
+  width: 100%;
+}
+
+.seller {
+  background-color: black;
+  padding: 10px 10px;
+  color: white;
+  position: absolute;
+  top: -10px;
+  left: 30%;
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: #ffffff;
+  width: 100px; 
+  height: 30px;
+
+}
+
+li img {
+  float: left;
+  padding-right: 20px;
+}
+li p {
+  padding: 20px;
+}
+
+#cards h3 {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 37px;
+  color: #000000;
+}
+
+#cards h4 {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 32px;
+  color: #656565;
+}
