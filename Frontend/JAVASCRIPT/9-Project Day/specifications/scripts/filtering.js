@@ -1,37 +1,91 @@
 $("button#best").on("click", function (event) {
   $(".false").hide();
+  $('#newcard .false').hide();
+
 });
 
 $("button#all").on("click", function (event) {
   $(".false").show();
-});
-
-
-// $("#name").on('click', function (event) {
-//     var mylist = $('#card');
-
-//     console.log(mylist);
-//     var listitems = mylist.find('#card h3');
-//     console.log(listitems);
-
-//     listitems.sort(function(a, b) {
-//        var compA = $(a).text().toUpperCase();
-//        var compB = $(b).text().toUpperCase();
-//        return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
-//     })
-
-//     $.each(listitems, function(idx, itm) { mylist.append(itm); });
-//     });
-
-function sort(selector) {
-    $(selector).children("#cards h3").sort(function(a, b) {
-        var A = $(a).text().toUpperCase();
-        var B = $(b).text().toUpperCase();
-        return (A < B) ? -1 : (A > B) ? 1 : 0;
-    }).appendTo(selector);
-}
+  $('#newcard').hide();
+  $("#cards").show();
   
-$('button').on('click', function() {
-    sort("#cards");
-    $("#newcard").text("sorted");
 });
+
+// add NAME button 
+const newArray = photosArray.sort(function (a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+});
+
+
+$("button#name").on("click", function () {
+  nameNew()
+  $("#cards").hide();
+});
+
+function nameNew() {
+  const newCard = $("#cards article").eq(0);
+  for (const photoData of newArray) {
+    const cloneCard1 = newCard.clone();
+    $("#newcard").append(cloneCard1);
+
+    // add from array
+    cloneCard1.find("img").attr("src", photoData.imgUrl);
+    cloneCard1.find("h3").text(photoData.name);
+    cloneCard1.find("h4").text(photoData.price);
+
+    if (photoData.bestSeller) {
+      cloneCard1.addClass("true");
+    } else {
+      cloneCard1.addClass("false");
+      $(".false .seller").hide();
+    }
+  }
+}
+
+
+// const newArrayNumber = photosArray.sort(function (a, b) {
+//     if (a.price < b.price) {
+//       return -1;
+//     }
+//     if (a.price > b.price) {
+//       return 1;
+//     }
+//     return 0;
+//   });
+
+  const newArrayNumber = photosArray.sort((a, b) => a.price - b.price);
+  console.log(newArrayNumber)
+
+
+//   $("button#price").on("click", function () {
+//     $("#cards").hide();
+//     $("#newcardNum").show(nameNewNum());
+//   });
+  
+//   function nameNewNum() {
+//     const newCard = $("#cards article").eq(0);
+//     for (const photoData of newArrayNumber) {
+//       const cloneCard12 = newCard.clone();
+//       $("#newcardNum").append(cloneCard12);
+  
+//       // add from array
+//       cloneCard12.find("img").attr("src", photoData.imgUrl);
+//       cloneCard12.find("h3").text(photoData.name);
+//       cloneCard12.find("h4").text(photoData.price);
+  
+//       if (photoData.bestSeller) {
+//         cloneCard12.addClass("true");
+//       } else {
+//         cloneCard12.addClass("false");
+//         $(".false .seller").hide();
+//       }
+//     }
+//   }
+
+//   console.log(newArrayNumber)

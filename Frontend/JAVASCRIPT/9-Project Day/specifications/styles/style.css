@@ -7,7 +7,7 @@ main {
 }
 
 nav,
-section#cards {
+section#cards, #newcard {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,12 +15,12 @@ section#cards {
   margin-top: 20px;
 }
 
-section#cards article {
+section#cards article, #newcard article {
   width: 21%;
   position: relative;
 }
 
-section#cards article img {
+section#cards article img, #newcard article img {
   width: 100%;
 }
 
@@ -50,7 +50,7 @@ li p {
   padding: 20px;
 }
 
-#cards h3 {
+#cards h3, #newcard h3 {
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -59,7 +59,7 @@ li p {
   color: #000000;
 }
 
-#cards h4 {
+#cards h4, #newcard h4 {
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;
@@ -72,7 +72,7 @@ ul {
   list-style: none;
 }
 
-#coms p {
+#coms p, #newcard p {
 font-family: 'Archivo';
 font-style: normal;
 font-weight: 400;
