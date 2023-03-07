@@ -67,3 +67,16 @@ li p {
   line-height: 32px;
   color: #656565;
 }
+
+ul {
+  list-style: none;
+}
+
+#coms p {
+font-family: 'Archivo';
+font-style: normal;
+font-weight: 400;
+font-size: 29px;
+line-height: 32px;
+color: #656565;
+}

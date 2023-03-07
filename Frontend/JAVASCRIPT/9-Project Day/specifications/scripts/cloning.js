@@ -12,18 +12,17 @@ for (const photoData of photosArray) {
     cloneCard.addClass('true');
   } else {
     cloneCard.addClass('false');
-
     $(".false .seller").hide();
-
-
   }
-  // cloneCard.addClass(photoData.bestSeller);
-  // cloneCard.find('h3').addClass(photoData.bestSeller);
-  // console.log(photoData.bestSeller)
-
-
-  // hide all exept male
-//   $(".female").hide();
-//   $(".baby").hide();
 }
 newCard.remove();
+
+const modelComment = $("#coms li").eq(0);
+for (const com of comments) {
+  const comment = modelComment.clone();
+  $("#coms").append(comment);
+
+  comment.find("p").text(com.message);
+  comment.find("img").attr("src", 'images/' + com.user + '.png');
+}
+modelComment.remove();
