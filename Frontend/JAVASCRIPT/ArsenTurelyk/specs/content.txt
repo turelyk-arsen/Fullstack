@@ -1,0 +1,5 @@
+Our best harvests
+ALL
+IN STOCK
+SOON
+[cards are append dynamically]
