@@ -13,11 +13,11 @@
   border: 0;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--grey-background);
 }
 h1 {
-  font-family: 'Limelight', cursive;
+  font-family: "Limelight", cursive;
 }
 nav.nav-bar {
   display: flex;
@@ -80,14 +80,7 @@ form input {
   margin-bottom: 30px;
   padding: 10px;
 }
-form button {
-  background-color: var(--accent-color);
-  color: var(--text-white);
-  font-family: 'Limelight', cursive;
-  text-transform: uppercase;
-  padding: 15px 50px;
-  border-radius: 10px;
-}
+
 footer {
   background-color: var(--dark-grey-footer);
 }
@@ -104,11 +97,28 @@ footer a {
   font-size: 20px;
 }
 
-
-
 /* More CSS ? Write it here !*/
-  /* MY STYLE  */
-  /* FOR BUTTON */
+/* MY STYLE  */
+
+/* Add class for form button with properties :disabled */
+form button:disabled {
+  background-color: var(--dark-grey-footer);
+  color: var(--text-white);
+  font-family: "Limelight", cursive;
+  text-transform: uppercase;
+  padding: 15px 50px;
+  border-radius: 10px;
+}
+form button {
+  background-color: var(--accent-color);
+  color: var(--text-white);
+  font-family: "Limelight", cursive;
+  text-transform: uppercase;
+  padding: 15px 50px;
+  border-radius: 10px;
+}
+
+/* FOR BUTTON */
 #buttons {
   text-align: center;
 }
@@ -119,7 +129,7 @@ footer a {
   border-radius: 10px;
   margin-right: 10px;
 }
-.active {
+.myActive {
   background-color: var(--accent-color);
 }
 .soon {
@@ -134,7 +144,7 @@ footer a {
   left: 50%;
 }
 
-.inStock{
+.inStock {
   background-color: var(--accent-color);
   padding: 10px;
   color: var(--text-white);
@@ -155,6 +165,11 @@ section#cards article {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.221);
+}
+section#cards article:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 720px) {
@@ -254,7 +269,7 @@ section#cards article {
     margin-top: 20px;
     gap: 20px;
   }
-  
+
   section#cards article {
     width: 31%;
     height: 300px;

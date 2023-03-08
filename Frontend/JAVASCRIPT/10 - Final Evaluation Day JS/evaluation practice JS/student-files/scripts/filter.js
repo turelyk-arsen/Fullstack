@@ -1,9 +1,10 @@
 // FILTERING
-// button all 
+
+// button all
 $("#all").on("click", function () {
   // CSS
-  $("button").removeClass("active");
-  $(this).addClass("active");
+  $("button").removeClass("myActive");
+  $(this).addClass("myActive");
 
   // ACTION
   $("#cards article.inStockForFilter").show();
@@ -13,19 +14,19 @@ $("#all").on("click", function () {
 // button in stock
 $("#inStock").on("click", function () {
   // CSS
-  $("button").removeClass("active");
-  $(this).addClass("active");
+  $("button").removeClass("myActive");
+  $(this).addClass("myActive");
 
   // ACTION
   $("#cards article.inStockForFilter").show();
   $("#cards article.soonForFilter").hide();
 });
 
-// button soon 
+// button soon
 $("#soon").on("click", function () {
   // CSS
-  $("button").removeClass("active");
-  $(this).addClass("active");
+  $("button").removeClass("myActive");
+  $(this).addClass("myActive");
 
   // ACTION
   $("#cards article.inStockForFilter").hide();

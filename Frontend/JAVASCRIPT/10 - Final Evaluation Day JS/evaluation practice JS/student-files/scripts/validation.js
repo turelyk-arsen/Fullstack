@@ -1,9 +1,9 @@
-// FORM validation
+// FORM validation victim name
 $("#victim").on("keyup", function () {
   //   input
   const victim = $("#victim").val();
   // check value
-  const victimValid = victim.includes(" ");
+  const victimValid = victim.length > 4 && victim.includes(" ");
   //   logic
   if (victimValid) {
     $("#victim").css({ borderColor: "green" });
@@ -12,6 +12,7 @@ $("#victim").on("keyup", function () {
   }
 });
 
+// FORM validation date
 $("#carry").on("keyup", function () {
   //   input
   const carry = $("#carry").val();
