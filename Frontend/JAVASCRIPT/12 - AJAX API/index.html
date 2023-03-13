@@ -1,30 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat rooms</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <!-- https://fullstack-course.notion.site/AJAX-Chat-Documentation-e67cf6611e274370a9de77b6514dfec4 -->
+  
     <nav>
-        <a href="pages/signup.html">Sign up</a>
-        <a href="pages/login.html">Log in</a>
+      <!-- <a href="pages/login.html">Log in</a> -->
+      <ul>
+        <li><a href="pages/signup.html">Sign up</a></li>
+        <li><button id="disconect">Disconect</button></li>
+      </ul>
     </nav>
     <h1>NAME</h1>
     <h2>Rooms</h2>
     <ul id="roomsList">
-        <!-- <li></li> -->
+      <!-- <li></li> -->
     </ul>
+    
     <form id="addRoom">
-        <input type="text" id="roomInput">
-        <button type="submit">ADD</button>
+      <input type="text" id="roomInput" />
+      <button type="submit">ADD</button>
     </form>
 
+    <!-- message roomsList -->
+    <!-- submit form -->
+    <!-- user list  -->
+    <!-- I'm preparing the clone model  -->
+    <section class="users">
+      <h2>Users</h2>
+      <ul id="userList">
+        <li>User</li>
+      </ul>
+    </section>
 
+    <section class="messages">
+      <!-- messages list  -->
+      <ul id="messageList">
+        <li>
+          <img src="" />
+          <p></p>
+        </li>
+      </ul>
+      <!-- submit form  -->
+      <form action="#" id="message-form">
+        <input type="text" id="messageInput" />
+        <input type="submit" />
+      </form>
+    </section>
 
     <!-- My scripts-->
+    <script src="scripts/jquery-3.6.3.js"></script>
     <script src="scripts/rooms.js"></script>
-</body>
+    <script src="scripts/users.js"></script>
+    <script src="scripts/signup.js"></script>
+  </body>
 </html>
