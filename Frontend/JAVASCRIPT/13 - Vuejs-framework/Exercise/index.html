@@ -17,10 +17,10 @@
 
     <div id="category">
       <ul>
-        <li @click="myfunction()" 
+        <li @click="myfunction(item)" 
         v-for="item in category" 
         :class="{ }">
-            {{ item }}
+            {{item}}
           </li>
       </ul>
 
