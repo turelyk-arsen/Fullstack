@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VUE JS</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Hello {{firstName}}</h1>
+      <img v-bind:src="picture" :alt="`${firstName} ${lastName}`" />
+
+      <h1>{{firstName}} {{lastName}}</h1>
+      <h3>Email {{email}}</h3>
+      <button>Get Random User</button>
+      <!-- <img src={{picture}}>  NO  -->
+      <!-- we need to use directive vue js called: 'v-bind:' -->
+    </div>
+    <!-- vue js link CDN https://vuejs.org/guide/quick-start.html#using-vue-from-cdn -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
