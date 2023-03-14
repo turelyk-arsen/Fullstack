@@ -8,16 +8,26 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
+
     <div id="app">
       <h1>Hello {{firstName}}</h1>
-      <img v-bind:src="picture" :alt="`${firstName} ${lastName}`" />
+      <img :class="gender" v-bind:src="picture" :alt="`${firstName} ${lastName}`" />
+      <!-- <img src={{picture}}>  NO  -->
 
+      <!-- we need to use directive vue js called: 'v-bind:' or : -->
+
+      <!-- we have gender male/female and we created the class in css
+we want it to change color on the button and the img border
+we want to bind img button with the element class='gender' -->
       <h1>{{firstName}} {{lastName}}</h1>
       <h3>Email {{email}}</h3>
-      <button>Get Random User</button>
-      <!-- <img src={{picture}}>  NO  -->
-      <!-- we need to use directive vue js called: 'v-bind:' -->
+      <button :class="gender" v-on:click="getUser()">Get Random User</button>
+<!-- button on click we want to generate random user add an event v-on:click  -->
+
+
+
     </div>
+
     <!-- vue js link CDN https://vuejs.org/guide/quick-start.html#using-vue-from-cdn -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="scripts/app.js"></script>
