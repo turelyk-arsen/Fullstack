@@ -29,6 +29,42 @@
       <button v-on:click="getJoke()">Get Random Joke</button>
     </div>
 
+    <div id="counter">
+      counter {{counter}}
+    </div>
+
+    <div id="bind-attribute">
+      <span v-bind:title="message">  Hover your mouse over me for a few seconds to see my dynamically-bound title</span>
+    </div>
+
+    <div id="event-handling">
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">Message</button>
+    </div>
+
+    <div id="two-way-binding">
+      <p>{{message}}</p>
+      <input v-model="message">
+    </div>
+
+    <div id="conditional-rendering">
+      <span v-if="seen">You see me</span>
+    </div>
+
+    <div id="list-rendering">
+      <ol>
+        <li v-for="todo in todos">
+          {{todo.text}}
+        </li>
+      </ol>
+    </div>
+
+    <div id="newComponent">
+      <ol>
+        <todo-item></todo-item>
+      </ol>
+    </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>
   </body>

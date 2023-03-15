@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyChatRoom</title>
+    <!-- My style -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="pages/signup.html">Sign up</a>
+            </li>
+            <li>
+                <button id="disconnect">Disconnect</button>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>Messenger</h1>
+    <!-- Select a room -->
+    <h2>Rooms</h2>
+    <ul id="roomsList"></ul>
+    <form id="addRoom">
+        <input type="text" id="roomInput">
+        <button type="submit">Add</button>
+    </form>
+    <h2>Messages</h2>
+    <section class="messages">
+        <!-- Message list -->
+        <ul id="messageList">
+          <li>
+            <img src="" />
+            <p></p>
+          </li>
+        </ul>
+        <!-- submit form -->
+        <form id="message-form" action="">
+          <input id="messageInput" type="text" />
+          <input type="submit" />
+        </form>
+    </section>
+
+    <!-- userlist-->
+    <section class="users"> 
+        <h2>Users</h2>
+        <ul id="userList">   <!-- Im preparing the Clone Model-->
+            <li>User</li>
+        </ul>
+    </section>  
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="scripts/jquery-min.js"></script>
+    <!-- My scripts -->
+    <script src="scripts/rooms.js"></script>
+    <script src="scripts/signup.js"></script>
+    <script src="scripts/users.js"></script>
+    <script src="scripts/messages.js"></script>
+</body>
+</html>
