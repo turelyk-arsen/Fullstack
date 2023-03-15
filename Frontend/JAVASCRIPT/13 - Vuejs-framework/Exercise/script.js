@@ -110,13 +110,17 @@ const ListRendering = {
 };
 Vue.createApp(ListRendering).mount("#list-rendering");
 
-// component 
+// components 
 const TodoItem = {
-  template: `<li>This is one of the your task</li>`,
-};
+  template: `<li>This is one of the your task</li>`
+}
+
 const appTask = Vue.createApp({
-  component: {
+  components: {
     TodoItem,
   },
 });
+
 appTask.mount("#newComponent");
+
+// next components 
