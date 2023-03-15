@@ -48,5 +48,41 @@ class JokeGenerator extends React.Component {
       selectedCat: catParam,
     }));
   }
-  
+  // put into the DOM
+  componentDidMount() {
+    this.getRndJoke();
+    this.getCategories();
+  }
+  // render method is used to render the component to the DOM
+  // it returns a call to the createElement() function
+  // to create a React tElements (HTML) JSX
+  // with a div containing the following child elements:
+  render() {
+    return e(
+      // e is a shorthand for the React.createElement function see const above
+      "div",
+      null,
+      e("h1", null, `Jokes - ${this.state.selectedCat}`),
+      e(
+        "ul",
+        null,
+        this.state.categories.map((cat) =>
+          e(
+            "li",
+            {
+              className: this.state.selectedCat === cat ? "selected" : "",
+              onClick: () => this.getCatJoke(cat),
+            },
+            cat
+          )
+        )
+      ),
+      e("p", null, this.state.joke),
+      e("button", { onClick: () => this.getRndJoke() }, "Make my day")
+    );
+  }
 } // end of JokeGenerator Component
+
+const domContainer = document.querySelector("#app");
+const root = ReactDOM.createRoot(domContainer);
+root.render(e(JokeGenerator));
