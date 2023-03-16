@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JokesPageComponent } from './pages/jokes-page/jokes-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
+// import the HTTP client features(module)
+import {HttpClientModule} from "@angular/common/http"
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

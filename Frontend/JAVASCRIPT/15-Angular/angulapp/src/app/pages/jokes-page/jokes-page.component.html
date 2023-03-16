@@ -1,7 +1,16 @@
-<p>jokes-page works</p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam officia
-  reiciendis vero quasi, ut repudiandae inventore quod ratione minus deserunt
-  quis, aspernatur voluptatem veritatis. Nulla obcaecati provident culpa
-  accusamus rem?
-</p>
+<h2>Welcome and enjoy your joke</h2>
+<!-- capture the click -->
+<button (click)="clickGenerate()">generate</button>
+<!-- display data bind a joke  -->
+<p>{{daJoke}}</p>
+
+<!-- loop for the categories Array  -->
+<ul>
+    <li *ngFor="let category of categoriesArray">
+        <button (click)="selectCat(category)">
+           {{category}} 
+        </button>
+        
+    </li>
+</ul>
+

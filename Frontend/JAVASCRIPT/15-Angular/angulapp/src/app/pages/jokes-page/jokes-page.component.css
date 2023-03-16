@@ -1,5 +1,10 @@
 p {
-    width: 70%;
-    margin: auto;
     color: lightcoral;
+}
+ul {
+    column-count: 3;
+    list-style: none;
+}
+li {
+    margin-top: 10px;
 }
