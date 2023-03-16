@@ -1,3 +1,19 @@
-<h1>Hello Angular</h1>
-<h1>{{title}}</h1>
+<!-- <h1>Hello Angular</h1> -->
+<h1>{{ title }}</h1>
+<!-- <p>This is my app</p> -->
+
+<nav>
+  <ul>
+    <li>
+      <a [routerLink]="'/user-generator'">User</a>
+    </li>
+    <li>
+      <a [routerLink]="'/jokes'">Jokes</a>
+    </li>
+  </ul>
+</nav>
+<!-- Focus on the routing ---app-routing.module.ts --- path to specific component -->
 <router-outlet></router-outlet>
+
+<!-- <app-jokes-page></app-jokes-page> -->
+<!-- <app-user-page></app-user-page> -->
