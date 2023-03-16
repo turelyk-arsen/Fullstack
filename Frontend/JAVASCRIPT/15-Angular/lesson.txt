@@ -1,0 +1,19 @@
+1. Module -> features, navigation on your site
+2. Component -> visual element  app-
+3. Service -> data, your API
+
+1.generate a node project
+npm init
+
+2. install a dependency
+npm install boostrap
+npm install jquery
+
+this generate a node_modules folders containing the DEPENDENCY code
+
+3. Don't copy...any NODE_MODULES you can generate  in the console: npm install
+your PACKAGE.JSON dependencies and download that.
+
+CMD 
+1. angular CLI -> ng  --- npm install -g @angular/cli --- npm i -g @angular/cli
+2. create angular project --- ng new angulapp
