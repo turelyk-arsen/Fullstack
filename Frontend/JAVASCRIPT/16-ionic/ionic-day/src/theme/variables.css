@@ -234,3 +234,9 @@ http://ionicframework.com/docs/theming/ */
     --ion-card-background: #1e1e1e;
   }
 }
+ion-card {
+  text-align: center;
+  width: 33%;
+  margin: 20px auto;
+  
+}

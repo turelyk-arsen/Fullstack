@@ -8,7 +8,6 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      
       <ion-card color="light"
         ><ion-card-header>
           <ion-card-title>Hello {{ firstName }}</ion-card-title>
@@ -18,13 +17,12 @@
             :alt="`${firstName} ${lastName}`"
           />
           <ion-card-subtitle>{{ firstName }} {{ lastName }}</ion-card-subtitle>
-          
-        </ion-card-header> 
+        </ion-card-header>
         <ion-card-content>Email: {{ email }}</ion-card-content>
 
         <ion-button v-on:click="getUser()" :class="gender"
-            >Get Random User</ion-button
-          >
+          >Get Random User</ion-button
+        >
 
         <!-- <ion-card-content>
           Here's a small text description for the card content. Nothing more,
