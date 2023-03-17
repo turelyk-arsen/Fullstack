@@ -1,0 +1,7 @@
+{
+  "name": "ionic-day",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
