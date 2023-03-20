@@ -10,7 +10,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <li>create a git for the project</li>
   <li>publish repo</li>
   <li>go to netlify</li>
-  <li>import setup</li>
+  <li>Important setup: npm run build + dist</li>
 </ol>
 
 <RouterView />
@@ -76,6 +76,10 @@ nav a:first-of-type {
 
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+  h1 {
+    color: red;
+    text-align: center;
   }
 }
 </style>
