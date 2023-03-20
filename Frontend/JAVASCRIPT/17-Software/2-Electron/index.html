@@ -17,23 +17,23 @@
     <button>target</button>
     <script>
       const target = document.querySelector("button");
-      let health = 10;
+      let health = 3;
       let damages = 1;
+      let start;
+      let end;
+      let diff;
 
       target.addEventListener("click", function () {
-      health -= damages;
-      if (health < 0) {
-        alert('GG')
-      }
-
-        //   const d = new Date();
-        //   hp -= 1;     
-        //   console.log(hp);
-        //   if (hp == 0) {
-        //     alert("game over");
-        // }
-    })
-
+        if (health == 10) {
+          start = Date.now();
+        }
+        health -= damages;
+        if (health < 0) {
+          end = Date.now();
+          diff = end - start;
+          alert("GG, completed in " + diff + " ms");
+        }
+      });
     </script>
   </body>
 </html>

@@ -2,5 +2,14 @@
  git -> Netlify(only FRONT)
 
 2. PWA - Progressive Web Apps
+
 3. Electron - Software - LOL
+
 4. Browser Robot - Puppeteer/Project 
+npm init -y (y is YES)
+npm i puppeteer
+in package.json we change:
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
