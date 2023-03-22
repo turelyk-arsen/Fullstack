@@ -1,0 +1,40 @@
+NEW 3 tier:
+
+1.Machine
+2.Server
+3.Database
+
+Primary key = id
+Foreign key
+
+
+Database
+1 Table of users:
+  1 column = id
+  2 column = email (the best, no name)
+  3 column = password
+  4 column = first_name
+  5 column = last_name
+
+2 Table of books: 
+  1 column = id
+  2 column = name
+  3 column = quantity
+  4 column = author_id
+  5 column = price
+
+3 Table of author
+  1 column = id
+  2 column = name
+  3 column = biography
+
+4 Table of users order
+  1 column = id
+  2 column = users_id
+  3 column = date
+  4 column = payment_method
+
+5 Order_details
+  1 column = book_id
+  2 column = order_id
+  3 column = quantity
