@@ -73,4 +73,49 @@ Database 2 exercise
 6 product_detail   
   1 product_id
   2 ingredient_id
-  
+
+
+Database 3 exercise
+1 Cars |>--Availability--<| Manufacturer ??
+  1 id
+  2 name
+  3 model
+  4 manufacturer
+  5 number of horses
+  6 fuel
+  7 color
+
+2 Agency
+  1 id
+  2 name 
+  3 city
+  4 address
+
+3 Cars manufacturer
+  1 id
+  2 name
+  3 year
+  4 address
+
+4 Availability 
+  1 cars_id
+  2 agency_id
+  3 quantity cars available
+
+  one to many   student |----< class
+                  one           many
+
+4 exercise
+Members  >-----| Members_in_video 
+Videos
+
+Members_in_video |-----<Videos
+    members_id and videos_id
+
+5 exercise
+
+clothes (id, name, description, category, price, photo, cat_id, agency_id)
+Agency(name, city, )
+product_detail (product_name, agency_name, boolean)
+
+agency >---| clothes |---< category
