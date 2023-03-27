@@ -40,3 +40,16 @@ EXERCISE
 3/CREATE TABLE books (id int, title varchar(50), price int, publication_date date, author_id int)
 
 INSERT INTO authors (fullname, biography, birth_year, gender) VALUES ('name 1', 'one bio', '1950', 'male')
+
+Part 1:
+SELECT * FROM books;
+SELECT title FROM books;
+SELECT title, publication_date FROM books;
+
+Part 2:
+SELECT title FROM books ORDER BY TITLE;
+SELECT fullname FROM authors ORDER BY fullname DESC;
+SELECT DISTINCT fullname FROM authors ORDER BY fullname DESC;
+
+
+
