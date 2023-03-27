@@ -51,5 +51,26 @@ SELECT title FROM books ORDER BY TITLE;
 SELECT fullname FROM authors ORDER BY fullname DESC;
 SELECT DISTINCT fullname FROM authors ORDER BY fullname DESC;
 
+Part 3:
+SELECT * FROM BOOKS WHERE PUBLICATION_DATE BETWEEN '2000-01-01' AND '2010-12-31'
+SELECT * FROM BOOKS WHERE PUBLICATION_DATE NOT BETWEEN  '2000-01-01' AND '2010-12-31'
+
+Part 4:
+INSERT INTO authors (fullname, biography, birth_year, gender) VALUES ('Tolkien', 'This is J.R.R. bio', '1992', 'Male')
+
+INSERT INTO BOOKS (title, price, publication_date, author_id) VALUES ('Lord of the ring', 24, '1954-07-29', 'Tolkiens author id') --- wrong
+
+WHERE TITLE LIKE 'Lord Of The Ring%' 
+'% the %'
+
+SELECT * FROM books WHERE author_id != 6
+ ---get all books from the author 'Tolkien' (you have to know the author id)
+get all the author's books that are not 'Tolkien'
+
+SELECT * from books ORDER by PUBLICATION_DATE DESC LIMIT 5
+
+UPDATE BOOKS SET PRICE = 30 WHERE AUTHOR_ID = 2
+UPDATE BOOKS SET PRICE = 30 WHERE PRICE = 25
+UPDATE BOOKS SET PRICE = PRICE + 10
 
 
