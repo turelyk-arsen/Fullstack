@@ -1,0 +1,42 @@
+QSL
+1. 
+SELECT * FROM TABLE
+SELECT * FROM TABLE WHERE ID=1
+SELECT * FROM TABLE WHERE PRICE=20
+SELECT * FROM TABLE WHERE NAME='ABCD' SORT PRICE ASC
+SELECT * FROM TABLE WHERE NAME='ABCD' SORT PRICE DSC
+
+2. INSERT INTO TABLE1 (PRICE, NAME) VALUES (18, 'ABCD')
+
+3. 
+UPDATE TABLE1 (NAME, PRICE) ...........
+UPDATE TABLE1 SET NAME = 'EFGH' WHERE ID=5
+UPDATE TABLE1 SET (NAME, PRICE) = ('EFGH', 51) WHERE ID=5
+UPDATE TABLE1 SET (NAME, PRICE) = ('EFGH', 51) WHERE YEAR='2014'
+
+4.
+DELETE FROM TABLE2 WHERE ID=12
+DELETE FROM TABLE2 WHERE PRICE=24
+
+EXERCISE
+
+1 TABLE AUTHORS
+1. ID              INT--- PRIMARY KEY
+2. NAME            VARCHAR(120)
+3. BIOGRAPHY       VARCHAR(1500)
+4. BIRTH_YEAR      YEAR
+5. GENDER          ENUM('MALE','FEMALE','OTHER')
+
+2 TABLE BOOKS
+1. ID                 INT--- PRIMARY KEY
+2. TITLE              VARCHAR(50)
+3. PRICE              INT
+4. PUBLICATION_DATE   DATE
+5. AUTHOR_ID          INT--- FOREIGN KEY  >---|
+
+1/CREATE SCHEMA Library
+2/CREATE TABLE authors (id int, fullname varchar(120),
+ biography varchar(1500), birth_year year, gender enum('Male', 'Female', 'Other'))
+3/CREATE TABLE books (id int, title varchar(50), price int, publication_date date, author_id int)
+
+INSERT INTO authors (fullname, biography, birth_year, gender) VALUES ('name 1', 'one bio', '1950', 'male')
