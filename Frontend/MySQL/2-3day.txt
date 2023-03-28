@@ -169,4 +169,33 @@ FROM
     categories
         LEFT JOIN
     songs ON songs.categ_id = categories.id
-    
+
+SELECT 
+    type, title
+FROM
+    categories
+        LEFT JOIN
+    songs ON songs.categ_id = categories.id
+
+retrieve the name of the artist, the song name and the category for each song.
+SELECT 
+    artists.name, songs.title, categories.type
+FROM
+    artists
+        INNER JOIN
+    songs ON artists.id = songs.artist_id
+        INNER JOIN
+    categories ON categories.id = songs.categ_id
+
+retrieve the name of the artist, the song name and the category for each song,
+but we still want to see all the categories without matched songs. We also want to see
+the result in the alphabetical order of the song names.
+SELECT 
+    artists.name, songs.title, categories.type
+FROM
+    artists
+        INNER JOIN
+    songs ON artists.id = songs.artist_id
+        RIGHT JOIN
+    categories ON categories.id = songs.categ_id
+ORDER BY songs.title
